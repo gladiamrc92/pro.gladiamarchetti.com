@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gladia Marchetti · Comédienne · CV</title>
+<link rel="stylesheet" href="_dossier/playfair.css">
+<style>
+  /* CV d'une page, A4 portrait. Palette et typographie de recitazione.html:
+     c'est la version imprimable de la page, pas un autre objet.
+     Les credits reprennent les didascalies du site (.fc-role / .fc-title /
+     .fc-client / .fc-detail): role en petites capitales, titre en grand,
+     ligne "réalisateur · production · année", detail. Comme des titres de fin.
+     Version papier (impression): class="paper" sur <html>, memes proportions,
+     palette inversee. Structure de base partagee avec les dossiers des autres
+     disciplines (_dossier/direzione-del-movimento-it.html). */
+  @page { size: 210mm 297mm; margin: 0; }
+  :root {
+    --ground: #0b1016; --ground-soft: #131a22;
+    --ink: #e8e6dd; --ink-dim: #8b96a3; --ink-faint: #697d94;
+    --accent: #7ca0c2; --rule: rgba(232,230,221,0.14);
+  }
+  html.paper {
+    --ground: #f3f1ea; --ground-soft: #e9e6dd;
+    --ink: #151b23; --ink-dim: #4a5563; --ink-faint: #5d6a79;
+    --accent: #3f6d99; --rule: rgba(21,27,35,0.16);
+  }
+  html.paper .logo-white { display:none; }
+  html:not(.paper) .logo-black { display:none; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background: var(--ground); color: var(--ink);
+    font-family: "Playfair Display", "Big Caslon", Baskerville, Georgia, serif;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+  .pg { width: 210mm; height: 297mm; position: relative; overflow: hidden; background: var(--ground);
+    display: grid; grid-template-columns: 68mm 1fr; }
+  h1, h2, h3, p, ul { margin: 0; font-weight: 400; }
+  ul { padding: 0; list-style: none; }
+  a { color: inherit; text-decoration: none; }
+  .kicker { font-size: 6.6pt; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-faint); }
+
+  /* Colonne gauche: photo, logo, fiche. Aeree: peu de choses, bien espacees. */
+  .side { background: var(--ground-soft); position: relative; }
+  .side .photo { display:block; width: 68mm; height: 96mm; object-fit: cover; object-position: 50% 22%; }
+  .side .brand { padding: 9mm 9mm 0 9mm; text-align: center; }
+  .side .logo { display:block; width: 42mm; height: auto; opacity: 0.92; margin: 0 auto; }
+  .side .role { margin-top: 3.4mm; font-size: 7.2pt; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); }
+  .side .where { margin-top: 1.4mm; font-size: 6.2pt; letter-spacing: 0.14em; line-height: 1.7; text-transform: uppercase; color: var(--ink-faint); }
+  .side .block { padding: 0 9mm; margin-top: 9mm; }
+  .side .block .kicker { display:block; margin-bottom: 2.6mm; }
+  .side .block li { font-size: 8.6pt; line-height: 1.75; color: var(--ink); }
+  .side .block li span { color: var(--ink-dim); }
+  .side .block li .lab { display:inline-block; min-width: 20mm; font-size: 6.2pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+  .side .contact li { font-size: 8.4pt; line-height: 1.7; }
+  .side .contact li a { border-bottom: 1px solid var(--rule); }
+  .side .contact li.soon { color: var(--ink-dim); }
+  .side .contact li.soon span { display:block; color: var(--ink-faint); }
+  .contact li a + span { color: var(--ink-faint); }
+
+  /* Colonne droite: les credits, comme des titres de fin. */
+  .main { padding: 16mm 15mm 14mm 13mm; position: relative; display: flex; flex-direction: column; }
+  /* 5/9/2026: le versioni scure hanno due etichette Video in piu' delle chiare;
+     con le righe aggiunte oggi il contenuto arrivava sul pie' di pagina. Sezioni
+     piu' strette solo qui, la versione chiara resta com'e'. */
+  .sec { margin-bottom: 8.5mm; }
+  .sec:last-of-type { margin-bottom: 0; }
+  .sec .kicker { display:block; padding-bottom: 2mm; border-bottom: 1px solid var(--rule); margin-bottom: 6mm; }
+  .cr { margin-bottom: 8.5mm; }
+  .cr:last-child { margin-bottom: 0; }
+  .cr .role { font-size: 6.6pt; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); }
+  .cr .title { font-size: 18pt; line-height: 1.1; color: var(--ink); margin: 1.2mm 0 1.4mm; }
+  .cr .client { font-size: 7.2pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); line-height: 1.8; }
+  .cr .detail { font-size: 8.4pt; font-style: italic; line-height: 1.6; color: var(--ink-dim); margin-top: 0.8mm; text-align: justify; }
+  .cr .video { display:inline-block; margin-top: 0.8mm; font-size: 6.4pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--rule); }
+  .cr.small .title { font-size: 15pt; }
+  .two { display: grid; grid-template-columns: 1fr 1.4fr; column-gap: 8mm; }
+  .two .cr.small .title { font-size: 14pt; }
+  /* le due sezioni affiancate tengono fra loro e il blocco dopo lo stesso 7mm delle altre */
+  .two-set { grid-template-columns: 1.4fr 1fr; margin-bottom: 7mm; }
+  .two-set .sec { margin-bottom: 0; }
+  .foot { position: absolute; left: 68mm; right: 15mm; bottom: 9mm; text-align: center;
+    font-size: 6.4pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); }
+  /* 5/9/2026: stessa ricetta del CV danza (danza-cv-fr.html), copiata pezzo per pezzo.
+     Il file e' scuro a schermo, e diventa chiaro da solo quando qualcuno preme Stampa
+     dal browser, senza dover scegliere niente. Il PDF scuro si genera aprendo questo
+     file con #pdf in fondo all'URL: l'ancora mette class="pdf" su <html> e disattiva
+     la regola di stampa, altrimenti Chrome (che genera il PDF proprio con una stampa)
+     lo produrrebbe bianco. Il PDF chiaro resta recitazione-cv-fr-impression.html.
+     Le modifiche di CONTENUTO vanno fatte in tutti e due i file. */
+  .tools { position: fixed; top: 0; right: 0; z-index: 9; display: flex; gap: 1.4rem;
+    padding: 1.1rem 1.4rem; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; }
+  .tools button, .tools a { background: none; border: 0; padding: 0; cursor: pointer;
+    font: inherit; letter-spacing: inherit; text-transform: inherit;
+    color: var(--accent); border-bottom: 1px solid var(--rule); }
+  @media screen {
+    html, body { background: #070b10; }
+    /* Sotto i 818px il foglio A4 viene ridotto in scala (script in fondo):
+       scale() non accetta un calc con vw, quindi il numero lo calcola il JS. */
+    .stage { display: block; padding: 3.2rem 0 3rem; width: 210mm; margin: 0;
+      position: relative; left: var(--x, 0px);
+      transform-origin: top left; transform: scale(var(--z, 1)); }
+    .pg { margin: 0 0 2.2rem; box-shadow: 0 1.2rem 3.4rem rgba(0,0,0,.45); }
+    body { overflow-x: hidden; }
+  }
+  @media print {
+    /* chi stampa dal browser riceve il fondo chiaro, senza dover scegliere */
+    html:not(.pdf) {
+      --ground: #f3f1ea; --ground-soft: #e9e6dd;
+      --ink: #151b23; --ink-dim: #4a5563; --ink-faint: #5d6a79;
+      --accent: #3f6d99; --rule: rgba(21,27,35,0.16);
+    }
+    html:not(.pdf) .logo-white { display: none !important; }
+    html:not(.pdf) .logo-black { display: block !important; }
+    html, body { background: var(--ground); }
+    .stage { transform: none !important; left: 0 !important; width: auto !important; padding: 0 !important; margin: 0 !important; }
+    body { height: auto !important; }
+    .pg { margin: 0 !important; box-shadow: none !important; }
+    .tools { display: none !important; }
+    /* chi stampa non puo' cliccare, quindi le etichette VIDEO spariscono dalla carta */
+    html:not(.pdf) .video { display: none !important; }
+  }
+</style>
+<script>
+if (location.hash === '#pdf') document.documentElement.className += ' pdf';
+</script>
+<style>@media print { body, html { height:auto !important; min-height:0 !important; overflow:visible !important; } .stage { height:auto !important; } }</style>
+<!-- LINK AI VIDEO 12/9/2026 -->
+<!-- INDIRIZZI NELLA LINGUA 15/9/2026 -->
+<link rel="canonical" href="https://gladiamarchetti.com/cv-comedienne">
+<link rel="alternate" hreflang="en" href="https://gladiamarchetti.com/acting-cv">
+<link rel="alternate" hreflang="it" href="https://gladiamarchetti.com/cv-attrice">
+<link rel="alternate" hreflang="fr" href="https://gladiamarchetti.com/cv-comedienne">
+<link rel="alternate" hreflang="x-default" href="https://gladiamarchetti.com/acting-cv">
+</head>
+<body>
+
+<div class="tools mono">
+  <button type="button" onclick="window.print()">Imprimer</button>
+  <!-- 8/9: il file che arriva in casella si chiamava
+       "recitazione-cv-fr-impression.pdf", cioe' una parola italiana e un
+       termine di officina interna, sull'unico oggetto che esce dal sito e resta
+       nella cartella di chi valuta. Trovato da due lettori su tre al passo 4.
+       L'attributo download rinomina il file salvato senza toccare quello su disco. -->
+  <a href="cv-comedienne.pdf" download="Gladia Marchetti CV Comédienne 2026.pdf">Télécharger le PDF</a>
+</div>
+<div class="stage">
+
+<section class="pg">
+
+  <aside class="side">
+    <img class="photo" src="_dossier/media/recitazione-cover-3253.jpg" alt="Gladia Marchetti, portrait">
+    <div class="brand">
+      <img class="logo logo-white" src="_dossier/media/logo-white.png" alt="Gladia Marchetti">
+      <img class="logo logo-black" src="_dossier/media/logo-black.png" alt="Gladia Marchetti">
+      <p class="role mono">Comédienne</p>
+      <p class="where mono">France</p>
+    </div>
+
+    <div class="block">
+      <ul>
+        <li><span class="lab mono">Taille</span>1,65 m</li>
+        <li><span class="lab mono">Yeux</span>marron foncé</li>
+        <li><span class="lab mono">Cheveux</span>châtains, bouclés</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <span class="kicker mono">Langues</span>
+      <ul>
+        <li>Italien <span>langue maternelle</span></li>
+        <li>Français <span>courant</span></li>
+        <li>Anglais <span>courant</span></li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <span class="kicker mono">Compétences</span>
+      <ul>
+        <li>Danseuse professionnelle</li>
+        <li>Yoga</li>
+        <li>Plongée <span>PADI Open Water</span></li>
+        <li>Permis B</li>
+      </ul>
+    </div>
+
+    
+  </aside>
+
+  <main class="main">
+
+    <div class="sec">
+      <span class="kicker mono">Cinéma</span>
+      <div class="cr">
+        <p class="role mono">Petit rôle &middot; Fille tondue</p>
+        <p class="title">Les Rayons et les Ombres</p>
+        <p class="client mono">Xavier Giannoli &middot; Gaumont &middot; 2026</p>
+        <p class="detail">Avec Jean Dujardin, Nastya Golubeva, August Diehl</p>
+        <!-- Regola di Gladia (16/8): i "Voir" del CV puntano al portfolio, mai a
+             siti esterni: il teaser sta gia' sulla pagina Recitazione (#teaser-riquadro).
+             Indirizzo messo il 12/9/2026, nella lingua di questo CV. -->
+        <a class="video mono" href="https://gladiamarchetti.com/comedienne#recitazione-lavori" target="_blank" rel="noopener">Vidéo</a>
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="kicker mono">Courts métrages</span>
+      <div class="cr small">
+        <p class="role mono">Petit rôle &middot; Directrice d’école</p>
+        <p class="title">Face cachée</p>
+        <p class="client mono">2023</p>
+      </div>
+      <div class="cr small">
+        <p class="role mono">Rôle principal</p>
+        <p class="title">The Loop</p>
+        <p class="client mono">Réalisé par Gladia Marchetti &middot; 2023</p>
+      </div>
+      <div class="cr small">
+        <p class="role mono">Rôle principal</p>
+        <p class="title">Janine</p>
+        <p class="client mono">Un film de Camille Lacroix et Gladia Marchetti &middot; 2022</p>
+        <!-- Janine non sta nel portfolio (5/9/2026): il solo video e' su YouTube,
+             canale di Gladia, verificato via oEmbed. -->
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="kicker mono">Théâtre</span>
+      <div class="cr">
+        <p class="role mono">Rôle-titre</p>
+        <p class="title">Carmen</p>
+        <p class="client mono">Compagnie CTBL &middot; 2017 – 2025</p>
+        <p class="detail">Un spectacle de George Emmanuel</p>
+        <p class="detail">75 représentations en Île-de-France</p>
+      </div>
+    </div>
+
+    <!-- 7/9: Jeunet stava sotto "Pubblicita' · Altre esperienze", accanto a uno
+         spot; sulla pagina ha una fascia sua. Tre lettori su tre del passo 4
+         hanno detto che i due documenti gli davano pesi diversi. Ora ha il suo
+         titolo, con le stesse parole della pagina, e lo spot ha il suo. -->
+    <div class="two two-set">
+    <div class="sec">
+      <span class="kicker mono">Autres expériences</span>
+        <div class="cr small">
+          <p class="role mono">Doublure lumière</p>
+          <p class="title">Changer l’eau des fleurs</p>
+          <p class="client mono">Jean-Pierre Jeunet &middot; 2026</p>
+          <p class="detail">Doublure lumière d’Anouk Grinberg</p>
+        </div>
+    </div>
+    <div class="sec">
+      <span class="kicker mono">Publicité</span>
+        <div class="cr small">
+          <p class="role mono">Petit rôle &middot; Amie</p>
+          <p class="title">Adolphe Lafont</p>
+          <p class="client mono">2023</p>
+          <p class="detail">Marque de vêtements de travail</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="sec">
+      <span class="kicker mono">Formation</span>
+      <div class="two">
+        <div class="cr small">
+          <p class="role mono">Jeu face caméra</p>
+          <p class="title">Actors Factory</p>
+          <p class="client mono">Paris &middot; 2019 – 2022</p>
+        </div>
+        <div class="cr small">
+          <p class="role mono">Théâtre</p>
+          <p class="title">Studio Harmonic</p>
+          <p class="client mono">Paris &middot; 2014 – 2015</p>
+          <p class="detail">Pascal Couillaud</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="foot mono">Gladia Marchetti &middot; Comédienne &middot; CV 2026</div>
+
+</section>
+
+</div>
+
+<script>
+(function () {
+  var st = document.querySelector('.stage');
+  function fit() {
+    var w = document.documentElement.clientWidth;
+    var sw = st.offsetWidth;
+    var z = Math.min(1, (w - 24) / sw);
+    st.style.setProperty('--z', z);
+    st.style.setProperty('--x', Math.max(0, (w - sw * z) / 2) + 'px');
+    /* lo scale non riduce lo spazio occupato: si accorcia l'involucro a mano */
+    var h = st.scrollHeight;
+    document.body.style.height = (h * z + 40) + 'px';
+  }
+  fit();
+  addEventListener('resize', fit);
+})();
+</script>
+
+<script>
+/* TELEFONO E IPAD 10/9/2026. Dal telefono «Stampa» apre il PDF bianco, che ha gia' il formato di pagina giusto (decisione di Gladia,
+   10/9): il motore di stampa dei telefoni ignora @page. Sul computer resta window.print(). */
+(function () {
+  var b = document.querySelector('.tools button'); var a = document.querySelector('.tools a[download]');
+  if (!b || !a) return;
+  var pdf = a.getAttribute('href');
+  /* Safari (Mac) ignora @page, formato e margini, e aggiunge intestazione e pie': anche li' Stampa apre il PDF (Gladia, 10/9 ore 15). */
+  var safari = /Apple/.test(navigator.vendor || '') && !/CriOS|Chrome|Chromium|Edg/.test(navigator.userAgent || '');
+  b.addEventListener('click', function (e) {
+    if (window.matchMedia('(pointer:coarse)').matches || safari) { e.preventDefault(); e.stopImmediatePropagation(); window.open(pdf, '_blank'); }
+  }, true);
+})();
+</script>
+</body>
+</html>

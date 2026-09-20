@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gladia Marchetti · Chorégraphe · Dossier</title>
+<link rel="stylesheet" href="_dossier/playfair.css">
+<style>
+  /* Dossier chorégraphie, 3/9/2026. Même famille que direzione-del-movimento-it.html
+     (format 280 × 157,5 mm, playfair.css, crédits comme des titres de fin) et même
+     mécanique que danza-cv-fr.html (vert à l'écran, blanc à l'impression, page web
+     avec Imprimer / Télécharger). Palette de coreografia.html. Règles de Gladia :
+     le nom seulement dans le logo, "Basée en France", Éteignons sans année, les liens
+     vidéo pointent vers le portfolio, en adresse absolue vers la page dans la langue
+     du dossier (12/9/2026, le site est en ligne), liens externes en onglet nouveau. */
+  @page { size: 280mm 157.5mm; margin: 0; }
+  :root {
+    --ground: #232f2f; --ground-soft: #2d3c3c;
+    --ink: #d8e0dc; --ink-dim: #8a9c9a; --ink-faint: #819895;
+    --accent: #d47d5d; --rule: rgba(216,224,220,0.14); --ground-0: rgba(35,47,47,0);
+  }
+  html.paper {
+    --ground: #f4f2ec; --ground-soft: #e9e8e0;
+    --ink: #232f2f; --ink-dim: #4d5c5c; --ink-faint: #6b7a7a;
+    --accent: #b04f2c; --rule: rgba(35,47,47,0.16); --ground-0: rgba(244,242,236,0);
+  }
+  html.paper .logo-white { display: none; }
+  html:not(.paper) .logo-black { display: none; }
+  html.paper .method .body p { color: var(--ink-dim); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--ground); color: var(--ink);
+    font-family: "Playfair Display", "Big Caslon", Baskerville, Georgia, serif;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+  .pg { width: 280mm; height: 157.5mm; position: relative; overflow: hidden;
+    page-break-after: always; break-after: page; background: var(--ground); }
+  .pg:last-child { page-break-after: auto; break-after: auto; }
+  .kicker { font-size: 8.5pt; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ink-faint); margin: 0; }
+  .kicker.acc { color: var(--accent); }
+  h1, h2, h3, p { margin: 0; font-weight: 400; }
+  .foot { position: absolute; left: 18mm; right: 18mm; bottom: 9mm; display: flex; justify-content: space-between;
+    align-items: baseline; font-size: 7.5pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+  .foot .n { color: var(--ink-dim); }
+  a { color: inherit; text-decoration: none; }
+  /* lien vidéo : vers la page du portfolio dans la langue de ce dossier (12/9/2026) */
+  .vid { display: inline-block; margin-top: 4mm; font-size: 7.4pt; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule); padding-bottom: 0.6mm; }
+  /* LINK AI VIDEO 12/9/2026: cliccabile dove il link c'e', inerte dove manca */
+  .vid:not([href]) { pointer-events: none; }
+  .vid::before { content: "▶"; font-size: 6pt; margin-right: 2mm; }
+
+  /* 1. Couverture */
+  .cover .photo-box { position: absolute; left: 0; top: 0; width: 41%; height: 100%; overflow: hidden; }
+  .cover .photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; display: block; }
+  .cover .veil { position: absolute; left: 0; top: 0; width: 42%; height: 100%;
+    background: linear-gradient(90deg, var(--ground-0) 70%, var(--ground) 96%, var(--ground) 100%); }
+  .cover .txt { position: absolute; left: 42%; right: 0; top: 28mm; text-align: center; }
+  .cover .logo { display: block; height: 22mm; width: auto; margin: 6mm auto 2mm; }
+  .cover h2 { font-size: 24pt; color: var(--accent); margin-top: 6mm; letter-spacing: 0.01em; }
+  .cover .tag { margin: 16mm auto 0; font-size: 12.5pt; font-style: italic; color: var(--ink-dim); max-width: 104mm; line-height: 1.5; text-wrap: balance; }
+  .cover .contact { position: absolute; left: 42%; right: 0; text-align: center; bottom: 18mm; font-size: 8pt;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); line-height: 2.1; }
+  .cover .contact b { font-weight: 400; color: var(--ink-dim); }
+
+  /* 2 et 4. Une pièce par page : image à gauche, crédits à droite */
+  .work { padding: 16mm 18mm 0 18mm; display: grid; grid-template-columns: 1fr 86mm; column-gap: 12mm; }
+  .work .frame { width: 100%; height: 84mm; object-fit: cover; display: block; margin-top: 6mm; }
+  .work .strip { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3mm; margin-top: 3mm; }
+  .work .strip img { width: 100%; height: 26mm; object-fit: cover; display: block; }
+  .work .cred { padding-top: 6mm; }
+  .work .cred .title { font-size: 26pt; line-height: 1.1; color: var(--accent); margin: 3mm 0 5mm; }
+  .work .cred .l { font-size: 8.4pt; letter-spacing: 0.16em; text-transform: uppercase; line-height: 2.05; color: var(--ink); }
+  .work .cred .l i { font-style: italic; text-transform: none; letter-spacing: 0.04em; }
+  .work .cred .gloss { font-size: 9pt; line-height: 1.5; font-style: italic; color: var(--ink-dim); margin: 2.5mm 0 0; max-width: 300px; text-wrap: pretty; }
+  .work .cred .d { font-size: 7.6pt; letter-spacing: 0.04em; line-height: 1.95; color: var(--ink-faint); margin-top: 3mm; }
+  .work .cred .d b { font-weight: 400; color: var(--ink-dim); }
+  .work .cred .role { font-size: 10.2pt; line-height: 1.6; color: var(--ink-dim); margin-top: 6mm; font-style: italic; max-width: 316px; text-wrap: pretty; text-align: justify; }
+  .work .cred .role b { font-style: normal; font-weight: 400; color: var(--ink); }
+
+  /* 3. INequality, scène et film côte à côte */
+  .ineq { padding: 15mm 18mm 0 18mm; }
+  .ineq .head { display: flex; align-items: baseline; gap: 6mm; margin-top: 2mm; }
+  .ineq .head .title { font-size: 26pt; line-height: 1.1; color: var(--accent); }
+  .ineq .head .sub { font-size: 8.4pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); }
+  .ineq .two { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12mm; margin-top: 3mm; }
+  .ineq .pics { display: grid; grid-template-columns: 34mm 1fr; column-gap: 3mm; height: 41mm; }
+  .ineq .pics img { width: 100%; height: 41mm; object-fit: cover; display: block; }
+  .ineq .pics .wide { object-position: 50% 50%; }
+  .ineq .pics .basso { object-position: 50% 100%; }
+  .ineq .pics.film { grid-template-columns: 1fr 30mm; }
+  .ineq .k { margin-top: 4mm; letter-spacing: 0.2em; }
+  .ineq .l { font-size: 8.4pt; letter-spacing: 0.13em; text-transform: uppercase; line-height: 2.05; color: var(--ink); margin-top: 1.5mm; }
+  .ineq .d { font-size: 7.4pt; letter-spacing: 0.04em; line-height: 1.9; color: var(--ink-faint); margin-top: 2mm; }
+  .ineq .d b { font-weight: 400; color: var(--ink-dim); }
+  .ineq .pitch { font-size: 9.2pt; line-height: 1.5; font-style: italic; color: var(--ink-dim); margin-top: 3.5mm; max-width: 396px; text-wrap: pretty; text-align: justify; }
+  .ineq .vid { margin-top: 3mm; }
+
+  /* 5. Méthode : l'étiquette en haut comme sur les autres pages, puis le bloc
+     (titre, phrase, bandes à gauche / texte à droite) centré verticalement,
+     le texte de droite centré par rapport au bloc de gauche. */
+  .method { padding: 16mm 18mm 0 18mm; height: 132mm; display: flex; flex-direction: column; }
+  .method .cols2 { flex: 1; display: grid; grid-template-columns: 92mm 1fr; column-gap: 18mm; align-items: center; }
+  .method h2 { font-size: 22pt; line-height: 1.14; margin-top: 0; text-wrap: balance; }
+  .method .lead { margin-top: 6mm; font-size: 11.4pt; font-style: italic; color: var(--ink-dim); line-height: 1.55; max-width: 290px; text-wrap: balance; }
+  .method .body p { font-size: 10.2pt; line-height: 1.62; color: var(--ink); margin-bottom: 4mm; max-width: 488px; text-wrap: pretty; text-align: justify; }
+  .method .body p:last-child { margin-bottom: 0; }
+  .method .body p:first-child::first-letter { color: var(--accent); }
+  .band { margin-top: 8mm; padding-top: 4mm; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr; row-gap: 2.6mm; max-width: 82mm; }
+  .band p { font-size: 8.4pt; line-height: 1.5; }
+  .band .kicker { display: block; color: var(--accent); margin-bottom: 1mm; }
+  .band .m { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 7pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+
+  /* 6. Parcours (bio courte + trois colonnes comme les Radici de Direzione) et contacts */
+  .close { padding: 16mm 18mm 0 18mm; display: grid; grid-template-columns: 1fr 68mm; column-gap: 12mm; align-items: start; }
+  .close .bio p { font-size: 9.5pt; line-height: 1.45; color: var(--ink-dim); margin-bottom: 2.4mm; text-wrap: pretty; text-align: justify; }
+  .close .bio .kicker + p::first-letter { color: var(--accent); }
+  .close .bio p b { font-weight: 400; color: var(--ink); }
+  .close .bio .kicker { margin-bottom: 4mm; }
+  .cols { margin-top: 1.5mm; padding-top: 2.5mm; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 0.95fr 1.3fr 0.75fr; column-gap: 6mm; }
+  .col .kicker { color: var(--accent); margin-bottom: 2.6mm; }
+  .col p { font-size: 8.8pt; line-height: 1.35; margin-bottom: 1.0mm; color: var(--ink); }
+  .col p .m { display: block; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 6.4pt; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); margin-top: 0.4mm; line-height: 1.55; }
+  .close .words { font-size: 10.2pt; line-height: 1.7; font-style: italic; color: var(--ink-dim); text-wrap: pretty; margin-top: 0; text-align: justify; }
+  .close .words .kicker { font-style: normal; margin-bottom: 3mm; }
+  .close .ask { font-size: 21pt; line-height: 1.18; margin-top: 9mm; }
+  .close .links { margin-top: 7mm; }
+  .close .links a, .close .links .soon { display: flex; align-items: center; gap: 3mm; color: var(--ink); text-decoration: none; margin-bottom: 2.2mm; font-size: 9.2pt; }
+  .close .links svg { color: var(--accent); flex: none; }
+  .close .links .soon { color: var(--ink-faint); font-style: italic; }
+  .close .links .soon svg { color: var(--ink-faint); }
+  .close .links .handle { display: none; }
+  .close .links .langues { margin: 0 0 3mm; font-size: 7.6pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+  html.paper .close .links .handle { display: inline; color: var(--ink-faint); }
+
+  /* ---- page web : vert à l'écran, blanc quand quelqu'un imprime -------- */
+  .tools { position: fixed; top: 0; right: 0; z-index: 9; display: flex; gap: 1.4rem;
+    padding: 1.1rem 1.4rem; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; }
+  .tools button, .tools a { background: none; border: 0; padding: 0; cursor: pointer;
+    font: inherit; letter-spacing: inherit; text-transform: inherit;
+    color: var(--accent); border-bottom: 1px solid var(--rule); }
+  @media screen {
+    html, body { background: #18201f; }
+    .stage { display: block; padding: 3.2rem 0 3rem; width: 280mm; margin: 0;
+      position: relative; left: var(--x, 0px);
+      transform-origin: top left; transform: scale(var(--z, 1)); }
+    .pg { margin: 0 0 2.2rem; box-shadow: 0 1.2rem 3.4rem rgba(0,0,0,.45); }
+    body { overflow-x: hidden; }
+  }
+  @media print {
+    html:not(.pdf) {
+      --ground: #f4f2ec; --ground-soft: #e9e8e0;
+      --ink: #232f2f; --ink-dim: #4d5c5c; --ink-faint: #6b7a7a;
+      --accent: #b04f2c; --rule: rgba(35,47,47,0.16); --ground-0: rgba(244,242,236,0);
+    }
+    html:not(.pdf) .logo-white { display: none !important; }
+    html:not(.pdf) .logo-black { display: block !important; }
+    html:not(.pdf) .method .body p { color: var(--ink-dim); }
+    html:not(.pdf) .close .links .handle { display: inline; color: var(--ink-faint); }
+    html, body { background: var(--ground); }
+    .stage { transform: none !important; left: 0 !important; width: auto !important; padding: 0 !important; margin: 0 !important; }
+    body { height: auto !important; }
+    .pg { margin: 0 !important; box-shadow: none !important; }
+    .tools { display: none !important; }
+    /* 4/9: chi stampa non puo' cliccare, quindi le etichette VIDEO spariscono dalla carta */
+    html:not(.pdf) .vid { display: none !important; }
+  }
+</style>
+<script>
+if (location.hash === '#pdf') document.documentElement.className += ' pdf';
+</script>
+<style>@media print { body, html { height:auto !important; min-height:0 !important; overflow:visible !important; } .stage { height:auto !important; } }</style>
+<!-- LINK AI VIDEO 12/9/2026 -->
+<!-- INDIRIZZI NELLA LINGUA 15/9/2026 -->
+<link rel="canonical" href="https://gladiamarchetti.com/dossier-choregraphie">
+<link rel="alternate" hreflang="en" href="https://gladiamarchetti.com/choreography-dossier">
+<link rel="alternate" hreflang="it" href="https://gladiamarchetti.com/dossier-coreografia">
+<link rel="alternate" hreflang="fr" href="https://gladiamarchetti.com/dossier-choregraphie">
+<link rel="alternate" hreflang="x-default" href="https://gladiamarchetti.com/choreography-dossier">
+</head>
+<body>
+
+<div class="tools mono">
+  <button type="button" onclick="window.print()">Imprimer</button>
+  <a href="dossier-choregraphie.pdf" download="Gladia Marchetti Dossier Chorégraphie 2026.pdf">Télécharger le PDF</a>
+</div>
+<div class="stage">
+
+<!-- 1 · Couverture -->
+<section class="pg cover">
+  <div class="photo-box"><img class="photo" src="media/coreografia/portrait-sourire.jpg" alt=""></div>
+  <div class="veil"></div>
+  <div class="txt">
+    <p class="kicker acc mono">Dossier · 2026</p>
+    <img class="logo logo-white" src="media/logo/logo-dark.png" alt="Gladia Marchetti">
+    <img class="logo logo-black" src="media/logo/logo-light.png" alt="Gladia Marchetti">
+    <h2>Chorégraphe</h2>
+    <p class="tag">Le mouvement naît de ceux qui le portent.</p>
+  </div>
+  <div class="contact mono">France<br>
+    Italien · Français · Anglais
+  </div>
+</section>
+
+<!-- 2 · Éteignons les écrans -->
+<section class="pg">
+  <div class="work">
+    <div>
+      <p class="kicker mono">Spectacle vivant · Palais des Festivals, Cannes</p>
+      <img class="frame" src="media/coreografia/provini-video/g8-quartetto-affondo.jpg" alt="">
+      <div class="strip">
+        <img src="media/coreografia/provini-video/g11-sala-piena.jpg" alt="">
+        <img src="media/coreografia/provini-video/g12-cerchio-fronte.jpg" alt="">
+      </div>
+    </div>
+    <div class="cred">
+      <p class="kicker mono">Chorégraphie</p>
+      <p class="title">Éteignons les écrans</p>
+      <p class="l mono">Un spectacle de <i>Brice Kapel</i><br>Nagan Production · 2022</p>
+      <p class="gloss">Spectacle musical pour&nbsp;petits et&nbsp;grands sur&nbsp;l’usage des&nbsp;écrans.</p>
+      <p class="d mono">Chorégraphie <b>Gladia Marchetti</b><br>Sur le plateau : <b>4 danseurs,<br>3 artistes de cirque, 1 chanteur,<br>2 choristes, 4 musiciens</b></p>
+      <p class="role" style="max-width:325px"><b>Quatorze interprètes, un seul mouvement.</b><br> La chorégraphie ne s'arrête pas aux danseurs&nbsp;: artistes de cirque, chanteur, choristes et musiciens sont dirigés avec la même exigence, sur la grande scène du&nbsp;Palais&nbsp;des&nbsp;Festivals&nbsp;de&nbsp;Cannes.</p>
+      
+    </div>
+  </div>
+  <div class="foot mono"><span>Gladia Marchetti · Chorégraphe</span><span class="n">02</span></div>
+</section>
+
+<!-- 3 · INequality, la pièce et le film -->
+<section class="pg">
+  <div class="ineq">
+    <p class="kicker mono">Compagnie Wected · fondatrice</p>
+    <div class="head">
+      <p class="title">INequality</p>
+      <p class="sub mono">Spectacle vivant · Court-métrage</p>
+    </div>
+    <div class="two">
+      <div>
+        <div class="pics">
+          <img class="basso" src="media/coreografia/inequality/onze-bouge-colonnes.jpg" alt="">
+          <img class="wide" src="media/coreografia/inequality/tunnel-visages-large.jpg" alt="">
+        </div>
+        <p class="kicker mono k">La pièce · Chorégraphe, autrice et interprète</p>
+        <p class="l mono">Festival Onze Bouge, Paris · 2021<br>Amman Contemporary Dance Festival · Jordanie · 2023<br><i style="text-transform:none;letter-spacing:.04em">ouverture du festival, avec l'Institut&nbsp;français&nbsp;de&nbsp;Jordanie</i></p>
+        <p class="d mono">Conception et chorégraphie <b>Gladia Marchetti</b><br>Interprètes <b>Gladia Marchetti, Nina Chati, Ambre Nunes</b><br>Musique <b>Arthur Balatier</b> · Regard sociologique <b>Pauline Vessely</b></p>
+        
+      </div>
+      <div>
+        <div class="pics film">
+          <img class="basso" src="media/coreografia/inequality/film-rise-colonnes-double.jpg" alt="">
+          <img src="media/coreografia/inequality/film-crawl-jambes.jpg" alt="">
+        </div>
+        <p class="kicker mono k">Le film · Chorégraphe, autrice et interprète</p>
+        <p class="l mono">Court-métrage · 2021</p>
+        <p class="d mono">Écriture, chorégraphie, montage <b>Gladia Marchetti</b><br>Réalisation et image <b>May Meng</b><br>Interprètes <b>Nina Chati, Gladia Marchetti, Greta Quadri</b><br>Musique <b>Arthur Balatier</b> · Costumes <b>Ishanee Patra</b></p>
+        <p class="pitch">L'inégalité sociale, un sujet devenu banal mais qui conditionne profondément nos modes de vie et nos relations. Un travail sur le regard et l'interprétation, sur une gestuelle nourrie par l'émotion, entre&nbsp;la&nbsp;délicatesse de la musique classique et le poids du hip-hop.</p>
+        
+      </div>
+    </div>
+  </div>
+  <div class="foot mono"><span>Gladia Marchetti · Chorégraphe</span><span class="n">03</span></div>
+</section>
+
+<!-- 4 · Comme Si -->
+<section class="pg">
+  <div class="work">
+    <div>
+      <p class="kicker mono">Clip · Théâtre de la Renaissance, Paris</p>
+      <img class="frame" src="media/coreografia/rapper-chandelier-wide.jpg" alt="">
+      <div class="strip">
+        <img src="media/coreografia/comme-si-lucien-voile.jpg" alt="">
+        <img src="media/coreografia/rapper-smile-wide.jpg" alt="">
+      </div>
+    </div>
+    <div class="cred">
+      <p class="kicker mono">Chorégraphie</p>
+      <p class="title">Comme Si</p>
+      <p class="l mono">Clip officiel de <i>Lucien Lumière</i><br>Maison Lumière · 2025</p>
+      <p class="d mono">Chorégraphie <b>Gladia Marchetti</b><br>Interprètes <b>Sarah Okendo, Lucien Lumière</b><br>Réalisation <b>Eli Chicheportiche</b><br>Direction artistique <b>Roman Veiga</b><br>Direction de production <b>Octave Donn</b><br>Lumière <b>Iban Bergery</b><br>Musique <b>Solal Roubine</b><br>Mixage et mastering <b>Theo Chapira, Benjamin&nbsp;Savignoni</b></p>
+      <p class="role" style="max-width:325px"><b>Un duo pour la caméra.</b><br>Construit autour du rappeur Lucien&nbsp;Lumière et de la comédienne Sarah&nbsp;Okendo, dans la salle vide du Théâtre de la Renaissance.</p>
+      
+    </div>
+  </div>
+  <div class="foot mono"><span>Gladia Marchetti · Chorégraphe</span><span class="n">04</span></div>
+</section>
+
+<!-- 5 · Méthode. Corps en troisième personne comme dans Direzione, la voix à la première
+     personne est à la page 6. Phrases de Gladia&nbsp;: ancienne page Méthode (2025), raisonnement
+     sur Cannes (mémoire, à reprendre dans le dossier), rien d'inventé. -->
+<section class="pg">
+  <div class="method">
+    <p class="kicker mono">Méthode</p>
+    <div class="cols2">
+      <div>
+        <h2>Ce qui compte, c'est la vérité du geste.</h2>
+      <p class="lead">Le mouvement d'abord, construit à partir des interprètes, jamais plaqué sur eux.</p>
+      <div class="band">
+                <p><span class="kicker mono">Styles</span>Classique, contemporain, jazz, hip-hop.</p>
+<p><span class="kicker mono">Interprètes qu'elle a dirigés</span>Danseurs, circassiens, comédiens, chanteurs, musiciens,&nbsp;choristes.<br><span class="m">danse, cirque, voix, musique live</span></p>
+        <p><span class="kicker mono">Scènes et festivals</span>Palais des Festivals de Cannes, Festival Onze Bouge à Paris, Amman Contemporary Dance Festival.<br><span class="m">salle, plein air, caméra</span></p>
+      </div>
+      </div>
+      <div class="body">
+      <p>Danseuse devenue chorégraphe, Gladia fonde son travail sur une conviction&nbsp;: le&nbsp;mouvement se construit avec les interprètes, pas sur le papier.&nbsp;Elle&nbsp;part du&nbsp;thème&nbsp;et des intentions du projet, et compose avec les corps présents.</p>
+      <p>Qu'ils soient danseurs ou non, elle s'appuie sur la personne : sur son bagage, sur&nbsp;ce&nbsp;que son corps sait faire, et c'est de là qu'elle l'emmène ailleurs. Le travail prend des formes différentes selon le projet : ateliers et consignes précises d'où naît le matériau, improvisations à partir d'une situation, ou une chorégraphie déjà écrite à transmettre. Portés, travail au contact, recherche gestuelle : une&nbsp;écriture sur mesure, qui change avec l'histoire, l'espace, le sol, les objets sur&nbsp;le plateau.</p>
+      <p>Sa place est entre l'idée et le plateau&nbsp;: elle écoute, puis traduit en mouvement, à&nbsp;même les corps, dans les délais d'une production. Sur scène, le mouvement ne&nbsp;concerne pas que les danseurs. Dans Éteignons&nbsp;les&nbsp;écrans, artistes de cirque, chanteur, choristes et musiciens passent tous par le mouvement, chacun avec&nbsp;ce qu'il sait faire.</p>
+      <p>C'est là, dans ce terrain partagé entre son écriture et l'univers de chaque interprète, qu'elle veut continuer à construire.</p>
+    </div>
+  </div>
+  </div>
+  <div class="foot mono"><span>Gladia Marchetti · Chorégraphe</span><span class="n">05</span></div>
+</section>
+
+<!-- 6 · Parcours et contacts. Bio courte (source&nbsp;: dossier Wected 2022, mise à jour 2026),
+     trois colonnes comme les Radici de Direzione, puis la voix&nbsp;: les mots de Gladia du dossier
+     Direzione ("Nelle sue parole"), traduits. -->
+<section class="pg">
+  <div class="close">
+    <div>
+      <div class="bio">
+        <p class="kicker mono">Parcours</p>
+        <p>Formée en Italie à l'Officina delle Arti (méthode Royal&nbsp;Academy&nbsp;of&nbsp;Dance), puis à Los&nbsp;Angeles et à Paris, du&nbsp;classique au hip-hop en passant par le contemporain et le jazz, Gladia est interprète pour plusieurs compagnies. En 2024, elle danse à la cérémonie d'ouverture des <b>Jeux&nbsp;Paralympiques&nbsp;de&nbsp;Paris</b>, et&nbsp;pour&nbsp;Hermès, Valentino et Victoria's&nbsp;Secret, en défilés comme en événements. Comédienne, formée à&nbsp;l'Actors&nbsp;Factory à&nbsp;Paris, elle signe aussi la direction du mouvement pour la caméra et accompagne des interprètes qui ne sont pas danseurs.</p>
+        <p>En 2019, Brice&nbsp;Kapel l'appelle à Boston comme assistante à la chorégraphie sur <b>Coloricolex</b>, la version américaine de son spectacle Coloricocolà. Elle fonde la <b>Compagnie&nbsp;Wected</b> et y crée <b>INequality</b>, joué à Paris et, en&nbsp;2023, en ouverture de l'Amman Contemporary Dance Festival. En&nbsp;2022, elle signe la chorégraphie d'<b>Éteignons&nbsp;les&nbsp;écrans</b> au Palais&nbsp;des&nbsp;Festivals&nbsp;de&nbsp;Cannes&nbsp;; en&nbsp;2025, celle du clip <b>Comme&nbsp;Si</b> de Lucien&nbsp;Lumière.</p>
+      </div>
+      <div class="cols">
+        <div class="col">
+          <p class="kicker mono">Formation</p>
+                    
+<p>Officina&nbsp;delle&nbsp;Arti<span class="m">Italie</span></p>
+          <p>EDGE&nbsp;Performing&nbsp;Arts&nbsp;Center<span class="m">Los&nbsp;Angeles</span></p>
+          <p>Studio&nbsp;Harmonic<span class="m">Paris</span></p>
+          <p>Actors&nbsp;Factory<span class="m">Paris · Jeu</span></p>
+          <p>Alexandra&nbsp;Reynolds et Tom&nbsp;Afiyan<span class="m">Direction du mouvement · Cinéma</span></p>
+        </div>
+        <div class="col">
+          <p class="kicker mono">Scène</p>
+          <p>Cérémonie d'ouverture des Jeux Paralympiques<span class="m">Chorégraphie Alexander Ekman<br>Direction artistique Thomas Jolly<br>Paris 2024</span></p>
+          <p>Compagnie Relief, Nagan&nbsp;Production, Compagnie NoMad, Compagnie CTBL<span class="m">Interprète</span></p>
+          <p>Bonduelle<span class="m">Ballet créé pour la marque · Rôle principal</span></p>
+          <p>Hermès, Valentino, Victoria's&nbsp;Secret<span class="m">Défilés, événements, vidéos</span></p>
+        </div>
+        <div class="col">
+          <p class="kicker mono">Caméra</p>
+          <p>Les Rayons et les Ombres<span class="m">Xavier Giannoli · Gaumont<br>Comédienne</span></p>
+          <p>Lucien Lumière · Normal<span class="m">Clip officiel<br>Direction&nbsp;du&nbsp;mouvement</span></p>
+          <p>Sheryfa Luna · Si on parlait<span class="m">Clip officiel · Danseuse</span></p>
+          <p>Adolphe Lafont<span class="m">Film publicitaire<br>Danseuse</span></p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="words">
+        <p class="kicker mono">Ses mots</p>
+        <p>Mon travail commence toujours par une relation de confiance&nbsp;: c'est créer un cadre sécurisant, où la personne en face de moi peut se lâcher et sortir de sa zone de confort sans avoir peur de se tromper. C'est de là que tout part.</p>
+      </div>
+      <p class="ask">Transformons<br>ton idée<br>en spectacle.</p>
+      <div class="links mono">
+        <p class="langues mono">Italien · Français · Anglais</p>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  <div class="foot mono"><span>Gladia Marchetti · Chorégraphe</span><span class="n">06</span></div>
+</section>
+
+</div>
+
+<script>
+(function () {
+  var st = document.querySelector('.stage');
+  function fit() {
+    var w = document.documentElement.clientWidth;
+    var sw = st.offsetWidth;
+    var z = Math.min(1, (w - 24) / sw);
+    st.style.setProperty('--z', z);
+    st.style.setProperty('--x', Math.max(0, (w - sw * z) / 2) + 'px');
+    /* lo scale non riduce lo spazio occupato: si accorcia l'involucro a mano */
+    var h = st.scrollHeight;
+    document.body.style.height = (h * z + 40) + 'px';
+  }
+  fit();
+  addEventListener('resize', fit);
+})();
+</script>
+
+<script>
+/* TELEFONO E IPAD 10/9/2026. Dal telefono «Stampa» apre il PDF bianco, che ha gia' il formato di pagina giusto (decisione di Gladia,
+   10/9): il motore di stampa dei telefoni ignora @page. Sul computer resta window.print(). */
+(function () {
+  var b = document.querySelector('.tools button'); var a = document.querySelector('.tools a[download]');
+  if (!b || !a) return;
+  var pdf = a.getAttribute('href');
+  /* Safari (Mac) ignora @page, formato e margini, e aggiunge intestazione e pie': anche li' Stampa apre il PDF (Gladia, 10/9 ore 15). */
+  var safari = /Apple/.test(navigator.vendor || '') && !/CriOS|Chrome|Chromium|Edg/.test(navigator.userAgent || '');
+  b.addEventListener('click', function (e) {
+    if (window.matchMedia('(pointer:coarse)').matches || safari) { e.preventDefault(); e.stopImmediatePropagation(); window.open(pdf, '_blank'); }
+  }, true);
+})();
+</script>
+</body>
+</html>

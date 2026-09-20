@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gladia Marchetti · Dancer · CV</title>
+<link rel="stylesheet" href="_dossier/playfair.css">
+<style>
+  /* CV danse, deux pages A4 portrait. 18/8, regle unique pour TOUS les PDF
+     (recitazione, direzione, danza): fond vert fonce pour l'ecran et le lien
+     du site (danza-cv-fr.html/.pdf, fichier de base), fond clair pour
+     l'impression et les pieces jointes (danza-cv-fr-impression.html/.pdf,
+     class="paper" sur <html>). Les anciens danza-cv-fr-ecran et
+     danza-cv-fr-papier ont ete supprimes.
+     Regles de Gladia du 16/8, sur ce CV et sur celui de recitazione: le nom
+     seulement dans le logo, pas de phrase de presentation, role et style sous
+     le logo (comme son ancien CV), credits comme des titres de fin (role /
+     titre / compagnie · choregraphe · annee / detail), fiche sans titre, pas
+     d'age, pas de liste de styles, contacts en mots cliquables, scene d'abord,
+     stages avant la formation, formation en dernier avec "Discipline : noms"
+     alignes, de l'air. */
+  @page { size: 210mm 297mm; margin: 0; }
+  :root {
+    --ground: #232f2f; --ground-soft: #2d3c3c;
+    --ink: #d8e0dc; --ink-dim: #8a9c9a; --ink-faint: #819895;
+    --accent: #d47d5d; --rule: rgba(216,224,220,0.14);
+  }
+  html.paper {
+    --ground: #f4f2ec; --ground-soft: #e9e8e0;
+    --ink: #232f2f; --ink-dim: #4d5c5c; --ink-faint: #6b7a7a;
+    --accent: #b04f2c; --rule: rgba(35,47,47,0.16);
+  }
+  html.paper .logo-white { display:none; }
+  html:not(.paper) .logo-black { display:none; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background: var(--ground); color: var(--ink);
+    font-family: "Playfair Display", "Big Caslon", Baskerville, Georgia, serif;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+  .pg { width: 210mm; height: 297mm; position: relative; overflow: hidden; background: var(--ground);
+    display: grid; grid-template-columns: 68mm 1fr; page-break-after: always; break-after: page; }
+  .pg:last-child { page-break-after: auto; break-after: auto; }
+  h1, h2, h3, p, ul { margin: 0; font-weight: 400; }
+  ul { padding: 0; list-style: none; }
+  a { color: inherit; text-decoration: none; }
+  .kicker { font-size: 6.6pt; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-faint); }
+
+  /* Colonne gauche */
+  .side { background: var(--ground-soft); position: relative; }
+  .side .photo { display:block; width: 68mm; height: 102mm; object-fit: cover; object-position: 50% 45%; }
+  /* 16/8, seconda tornata su recitazione, vale per tutti: logo, ruolo e riga
+     "France" CENTRATI nella colonna. */
+  .side .brand { padding: 9mm 9mm 0 9mm; text-align: center; }
+  .side.plain .brand { padding-top: 16mm; }
+  .side .logo { display:block; width: 42mm; height: auto; opacity: 0.92; margin: 0 auto; }
+  .side .role { margin-top: 3.4mm; font-size: 7.2pt; letter-spacing: 0.26em; white-space: nowrap; text-transform: uppercase; color: var(--accent); }
+  .side .style { margin-top: 1.4mm; font-size: 8.6pt; font-style: italic; color: var(--ink-dim); letter-spacing: 0.02em; }
+  .side .where { margin-top: 1.4mm; font-size: 6.4pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
+  .side .block { padding: 0 9mm; margin-top: 8.5mm; }
+  .side .block .kicker { display:block; margin-bottom: 2.4mm; }
+  .side .block li { font-size: 8.6pt; line-height: 1.75; color: var(--ink); }
+  .side .block li span { color: var(--ink-dim); }
+  .side .block li .lab { display:inline-block; min-width: 20mm; font-size: 6.2pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+  .side .contact li { font-size: 8.4pt; line-height: 1.7; }
+  .side .contact li a { border-bottom: 1px solid var(--rule); }
+  .side .contact li.soon { color: var(--ink-dim); }
+  .side .brands { columns: 2; column-gap: 4mm; }
+  .side .brands li { white-space: nowrap; break-inside: avoid; font-size: 8.4pt; line-height: 1.75; }
+  .side .battles li { line-height: 1.4; margin-bottom: 2.4mm; }
+  .side .battles li span:not(.lab) { display:block; padding-left:20mm; font-size:7.2pt; color: var(--ink-dim); }
+
+  /* Colonne droite: les credits, comme des titres de fin. */
+  .main { padding: 10mm 15mm 7mm 13mm; position: relative; display: flex; flex-direction: column; }
+  .sec { margin-bottom: 4.5mm; }
+  .sec:last-of-type { margin-bottom: 0; }
+  .sec .kicker { display:block; padding-bottom: 1.8mm; border-bottom: 1px solid var(--rule); margin-bottom: 4.2mm; }
+  .cr { margin-bottom: 3.4mm; }
+  .cr:last-child { margin-bottom: 0; }
+  .cr .role { font-size: 6.6pt; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); }
+  .cr .title { font-size: 17pt; line-height: 1.1; color: var(--ink); margin: 1mm 0 1.2mm; }
+  .cr .client { font-size: 7.2pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); line-height: 1.8; }
+  .cr .detail { font-size: 8.4pt; font-style: italic; line-height: 1.55; color: var(--ink-dim); margin-top: 0.6mm; text-align: justify; }
+  .cr .video:not([href]) { pointer-events:none; }
+  .cr .video { display:inline-block; margin-top: 0.6mm; font-size: 6.4pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--rule); }
+  .cr.small .title { font-size: 15pt; }
+  .cr.small { margin-bottom: 5mm; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; column-gap: 10mm; }
+  .three { display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 6mm; row-gap: 1mm; }
+  .three .cr.small .title { font-size: 12.5pt; }
+  /* 19/8: les trois colonnes s'alignent ligne a ligne. Role et client sur une
+     hauteur fixe de deux lignes, client un peu plus serre pour que
+     "Compagnie Human - Marseille - 2023" tienne en deux lignes. */
+  .three .cr.small .role { line-height: 1.45; min-height: 2.9em; display: flex; align-items: flex-end; }
+  .three .cr.small .title { white-space: nowrap; margin-top: 0.6mm; }
+  /* 4/9: spaziatura fra le lettere ridotta da 0.12 a 0.06em. In italiano
+     "Danza e recitazione" (Janine) chiedeva 124px in una colonna da 115 e
+     finiva su due righe piu' l'anno sulla terza, mentre gli altri riquadri
+     della stessa griglia stanno su due righe. Misurato: a 0.06em ne chiede
+     114. Inglese e francese entravano gia'. */
+  .three .cr.small .client { font-size: 6.8pt; letter-spacing: 0.06em; line-height: 1.7; min-height: 3.4em; }
+  .three .cr.small { margin-bottom: 3.6mm; }
+  /* 2/9: quando l'ultimo riquadro resta solo sulla sua riga, le altezze
+     minime non allineano piu' niente e lasciano solo due buchi dentro la
+     cella (fra ruolo e titolo, e prima del link). Qui si annullano. */
+  .three .cr.small:last-child:nth-child(3n + 1) .role,
+  .three .cr.small:last-child:nth-child(3n + 1) .client { min-height: 0; }
+  .nowrap { white-space: nowrap; }
+
+  /* Stages et formation: une grille alignee, annee | nom | detail. */
+  .grid { display: grid; grid-template-columns: 21mm 1fr; column-gap: 4mm; row-gap: 3.1mm; }
+  .grid .y { font-size: 6.6pt; letter-spacing: 0.2em; color: var(--accent); padding-top: 1.6mm; }
+  .grid .n { font-size: 12.5pt; line-height: 1.15; color: var(--ink); }
+  .grid .n span { display:block; font-size: 7pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); margin-top: 0.8mm; }
+  .grid .n em { display:block; font-size: 8.4pt; font-style: italic; color: var(--ink-dim); margin-top: 0.8mm; line-height: 1.5; text-align: justify; }
+  .school { margin-bottom: 6mm; }
+  .school:last-child { margin-bottom: 0; }
+  .school .n { font-size: 14pt; color: var(--ink); }
+  .school .n span { font-size: 7pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); margin-left: 3mm; }
+  .school ul { margin-top: 1.8mm; }
+  .school li { display: grid; grid-template-columns: 24mm 1fr; column-gap: 3mm; font-size: 8.4pt; line-height: 1.6; color: var(--ink-dim); }
+  .school li b { font-weight: 400; font-size: 6.6pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); padding-top: 0.9mm; }
+  .side.plain { display: flex; flex-direction: column; }
+  /* 4/9: i marchi non vanno piu' spinti in fondo alla colonna. Con margin-top
+     auto restavano appiccicati al bordo e fra la battle e loro si apriva un
+     buco lungo quasi tutta la pagina 2: due isole con il vuoto in mezzo.
+     Ora seguono la battle come un blocco unico e il vuoto resta in fondo,
+     dove si legge come margine. Visto sul PDF reso in immagine, non sull'HTML. */
+  .side .block.bottom { margin-top: 8.5mm; padding-bottom: 13mm; }
+  .spacer { flex: 1; }
+  .foot { display: flex; justify-content: space-between; align-items: baseline; margin-top: 3mm;
+    font-size: 6.4pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); }
+
+  /* ---- 19/8: questo file è ANCHE la pagina del sito -------------------
+     Verde a schermo, BIANCO quando qualcuno preme Stampa dal browser.
+     Il PDF verde si genera aprendo questo file con #pdf in fondo all'URL:
+     l'ancora mette class="pdf" su <html> e disattiva la regola di stampa,
+     altrimenti Chrome (che genera il PDF proprio con una stampa) lo
+     produrrebbe bianco. Il PDF chiaro resta danza-cv-fr-impression.html.
+     Le modifiche di CONTENUTO vanno fatte in tutti e due i file. */
+  .tools { position: fixed; top: 0; right: 0; z-index: 9; display: flex; gap: 1.4rem;
+    padding: 1.1rem 1.4rem; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; }
+  .tools button, .tools a { background: none; border: 0; padding: 0; cursor: pointer;
+    font: inherit; letter-spacing: inherit; text-transform: inherit;
+    color: var(--accent); border-bottom: 1px solid var(--rule); }
+  @media screen {
+    html, body { background: #18201f; }
+    /* Sotto i 818px il foglio A4 viene ridotto in scala (script in fondo):
+       scale() non accetta un calc con vw, quindi il numero lo calcola il JS. */
+    .stage { display: block; padding: 3.2rem 0 3rem; width: 210mm; margin: 0;
+      position: relative; left: var(--x, 0px);
+      transform-origin: top left; transform: scale(var(--z, 1)); }
+    .pg { margin: 0 0 2.2rem; box-shadow: 0 1.2rem 3.4rem rgba(0,0,0,.45); }
+    body { overflow-x: hidden; }
+  }
+  @media print {
+    /* chi stampa dal browser riceve il fondo chiaro, senza dover scegliere */
+    html:not(.pdf) {
+      --ground: #f4f2ec; --ground-soft: #e9e8e0;
+      --ink: #232f2f; --ink-dim: #4d5c5c; --ink-faint: #6b7a7a;
+      --accent: #b04f2c; --rule: rgba(35,47,47,0.16);
+    }
+    html:not(.pdf) .logo-white { display: none !important; }
+    html:not(.pdf) .logo-black { display: block !important; }
+    html, body { background: var(--ground); }
+    .stage { transform: none !important; left: 0 !important; width: auto !important; padding: 0 !important; margin: 0 !important; }
+    body { height: auto !important; }
+    .pg { margin: 0 !important; box-shadow: none !important; }
+    .tools { display: none !important; }
+  /* 3/9: chi stampa non puo' cliccare, quindi le etichette VIDEO spariscono dalla carta */
+  html:not(.pdf) .video { display: none !important; }
+  }
+</style>
+<script>
+if (location.hash === '#pdf') document.documentElement.className += ' pdf';
+</script>
+<style>@media print { body, html { height:auto !important; min-height:0 !important; overflow:visible !important; } .stage { height:auto !important; } }</style>
+<!-- LINK AI VIDEO 12/9/2026 -->
+<!-- INDIRIZZI NELLA LINGUA 15/9/2026 -->
+<link rel="canonical" href="https://gladiamarchetti.com/dance-cv">
+<link rel="alternate" hreflang="en" href="https://gladiamarchetti.com/dance-cv">
+<link rel="alternate" hreflang="it" href="https://gladiamarchetti.com/cv-danzatrice">
+<link rel="alternate" hreflang="fr" href="https://gladiamarchetti.com/cv-danseuse">
+<link rel="alternate" hreflang="x-default" href="https://gladiamarchetti.com/dance-cv">
+</head>
+<body>
+
+<div class="tools mono">
+  <button type="button" onclick="window.print()">Print</button>
+  <a href="dance-cv.pdf" download="Gladia Marchetti CV Dancer 2026.pdf">Download PDF</a>
+</div>
+<div class="stage">
+
+<!-- ============================ PAGE 1 ============================ -->
+<section class="pg">
+  <aside class="side">
+    <img class="photo" src="_dossier/media/danza-cover-jeans.jpg" alt="Gladia Marchetti">
+    <div class="brand">
+      <img class="logo logo-white" src="_dossier/media/logo-white.png" alt="Gladia Marchetti">
+      <img class="logo logo-black" src="_dossier/media/logo-black.png" alt="Gladia Marchetti">
+      <p class="role mono">Dancer &middot; Performer</p>
+      <p class="style">Contemporary &middot; Experimental</p>
+      <p class="where mono">France</p>
+    </div>
+
+    <div class="block">
+      <span class="kicker mono">Languages</span>
+      <ul>
+        <li>Italian <span>native</span></li>
+        <li>French <span>fluent</span></li>
+        <li>English <span>fluent</span></li>
+      </ul>
+    </div>
+
+    
+  </aside>
+
+  <main class="main">
+    <div class="sec">
+      <span class="kicker mono">Stage</span>
+      <div class="cr">
+        <p class="role mono">Dancer &middot; Opening ceremony</p>
+        <p class="title">Paris 2024 Paralympic Games</p>
+        <p class="client mono">Alexander Ekman &middot; Thomas Jolly &middot; 2024</p>
+        <p class="detail">Place de la Concorde, with Chilly Gonzales, Christine and the Queens and Lucky Love</p>
+        <a class="video mono" href="https://gladiamarchetti.com/dance-paralympics" target="_blank" rel="noopener">Video</a>
+      </div>
+      <div class="cr">
+        <p class="role mono">Dancer</p>
+        <p class="title">Encore en corps</p>
+        <p class="client mono">Compagnie Relief &middot; Dominique Lisette &middot; 2023 – 2025</p>
+        <p class="detail">20 performances in the Paris region</p>
+      </div>
+      <div class="cr">
+        <p class="role mono">Title role &middot; Dance and theatre</p>
+        <p class="title">Carmen</p>
+        <p class="client mono">Compagnie CTBL &middot; George E. Prevost &middot; 2017 – 2025</p>
+        <p class="detail">75 performances in the Paris region</p>
+      </div>
+      <div class="cr">
+        <p class="role mono">Dancer</p>
+        <p class="title">Coloricocola</p>
+        <p class="client mono">Nagan Production &middot; Machita Daly &middot; 2018 – 2021</p>
+        <p class="detail">A show by Brice Kapel, Palais des Festivals de Cannes<br>Assistant choreographer for the restaging at Cary Memorial Hall, Lexington (USA)</p>
+      </div>
+      <div class="cr">
+        <p class="role mono">Dancer</p>
+        <p class="title">Éteignons les écrans</p>
+        <p class="client mono">Nagan Production &middot; 2021 – 2024</p>
+        <p class="detail">25 performances in the Paris region</p>
+      </div>
+      <div class="cr">
+        <p class="role mono">Choreographer and dancer &middot; Duet</p>
+        <p class="title">INequality</p>
+        <p class="client mono">Compagnie Wected &middot; 2019 – 2024</p>
+        <p class="detail">Festival Onze Bouge, Paris<br>Opening of the Amman Contemporary Dance Festival, Jordan</p>
+        <a class="video mono" href="https://gladiamarchetti.com/choreography-inequality" target="_blank" rel="noopener">Video</a>
+      </div>
+      <div class="cr">
+        <p class="role mono">Dancer &middot; Hip hop piece</p>
+        <p class="title">C’Franc</p>
+        <p class="client mono">Compagnie No MaD &middot; Mehdi Slimani &middot; 2020 – 2021</p>
+        <p class="detail">15 performances in the Paris region</p>
+        <a class="video mono" href="https://gladiamarchetti.com/dance-c-franc" target="_blank" rel="noopener">Video</a>
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="kicker mono">Workshops</span>
+      <div class="grid">
+        <span class="y mono">2025</span><p class="n">Édouard Hue<span>Beaver Dam Company</span><em>Movement research and company repertoire</em></p>
+        <span class="y mono">2024</span><p class="n">Laja Field<em>Floorwork</em></p>
+        <span class="y mono">2023</span><p class="n">Tamara Gvozdenovic &amp; Kangding Ray<em>Dancing with live music, movement and musicality</em></p>
+        <span class="y mono">2023</span><p class="n">Carmel Loanga<em>Character, performance and choreographic language</em></p>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="foot mono">
+      <span>Gladia Marchetti &middot; Dancer</span>
+      <span>1 / 2</span>
+    </div>
+  </main>
+</section>
+
+<!-- ============================ PAGE 2 ============================ -->
+<section class="pg">
+  <aside class="side plain">
+    <div class="brand">
+      <img class="logo logo-white" src="_dossier/media/logo-white.png" alt="Gladia Marchetti">
+      <img class="logo logo-black" src="_dossier/media/logo-black.png" alt="Gladia Marchetti">
+      <p class="role mono">Dancer &middot; Performer</p>
+      <p class="style">Contemporary &middot; Experimental</p>
+      <p class="where mono">France</p>
+    </div>
+
+    <div class="block">
+      <span class="kicker mono">Battles</span>
+      <ul class="battles">
+        <li><span class="lab mono">2022</span>OZ Dance <span>Winner</span></li>
+      </ul>
+    </div>
+
+    <div class="block bottom">
+      <span class="kicker mono">Brands</span>
+      <ul class="brands">
+        <li>Hermès</li><li>LVMH</li><li>Valentino</li><li>Victoria’s Secret</li>
+        <li>Nestlé</li><li>Engie</li><li>Innoha</li><li>Caisse d’Épargne</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="sec">
+      <span class="kicker mono">Screen work and events</span>
+      <div class="three">
+        <div class="cr small">
+          <p class="role mono">Live show</p>
+          <p class="title">Bonduelle</p>
+          <p class="client mono">Lead role<br>2018</p>
+          <a class="video mono" href="https://gladiamarchetti.com/dance#bonduelle" target="_blank" rel="noopener">Video</a>
+        </div>
+        <div class="cr small">
+          <p class="role mono">Commercial</p>
+          <p class="title">Adolphe Lafont</p>
+          <p class="client mono">2023</p>
+          <a class="video mono" href="https://gladiamarchetti.com/dance#lafont" target="_blank" rel="noopener">Video</a>
+        </div>
+        <div class="cr small">
+          <p class="role mono">Official music video</p>
+          <p class="title">Si on parlait</p>
+          <p class="client mono">Sheryfa Luna<br>2017</p>
+          <a class="video mono" href="https://gladiamarchetti.com/dance#sheryfa" target="_blank" rel="noopener">Video</a>
+        </div>
+        <div class="cr small">
+          <p class="role mono">Event</p>
+          <p class="title">Ledger</p>
+          <p class="client mono">Compagnie Human<br>2022</p>
+          <a class="video mono" href="https://gladiamarchetti.com/dance#ledger" target="_blank" rel="noopener">Video</a>
+        </div>
+        <div class="cr small">
+          <p class="role mono">Event</p>
+          <p class="title nowrap">Delta Festival</p>
+          <p class="client mono">Compagnie Human<br>2023</p>
+        </div>
+        <div class="cr small">
+          <p class="role mono">Television</p>
+          <p class="title nowrap">Melty Future Awards</p>
+          <p class="client mono">With Amir<br>2017</p>
+        </div>
+        <div class="cr small">
+          <p class="role mono">Short film</p>
+          <p class="title">Janine</p>
+          <p class="client mono">Dance and acting<br>2022</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="kicker mono">Dance training</span>
+      <div class="school">
+        <p class="n">Studio Harmonic <span>Paris &middot; 2014 – 2015</span></p>
+        <ul>
+          <li><b class="mono">Contemporary</b><span>Corinne Lanselle, Stéphanie Chatton, Stéphane Fratti, Peter Mika</span></li>
+          <li><b class="mono">Ballet</b><span>Grégory Cianci, Oli Speers</span></li>
+          <li><b class="mono">Jazz</b><span>Pascal Loussouarn, Salem Hammadi, James Carlès</span></li>
+          <li><b class="mono">Hip hop</b><span>Ly Em</span></li>
+          <li><b class="mono">Theatre</b><span>Pascal Couillaud</span></li>
+          <li><b class="mono">Singing</b><span>Alvina Lanselle</span></li>
+        </ul>
+      </div>
+      <div class="school">
+        <p class="n">EDGE Performing Arts Center <span>Los Angeles &middot; 2011 – 2013</span></p>
+        <ul>
+          <li><b class="mono">Contemporary</b><span>Karen Chuang, Marissa Osato</span></li>
+          <li><b class="mono">Ballet</b><span>Nicole Harlan</span></li>
+          <li><b class="mono">Jazz</b><span>Denise Leitner, Terry Best, Malaya, Adam Parson</span></li>
+          <li><b class="mono">Hip hop</b><span>Tovaris Wilson, Noland Padilla</span></li>
+        </ul>
+      </div>
+      <div class="school">
+        <p class="n">Officina delle Arti <span>Italy &middot; 1998 – 2011</span></p>
+        <ul>
+          <li><b class="mono">Contemporary</b><span>Loretta Fariselli, Valentina Buldrini</span></li>
+          <li><b class="mono">Ballet</b><span>Sabrina Minguzzi, RAD exams up to Intermediate level</span></li>
+          <li><b class="mono">Modern jazz</b><span>Sara Buratti</span></li>
+          <li><b class="mono">Hip hop</b><span>Denis Di Pasqua, Kriss Buzzi, La B Fujiko</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="kicker mono">Acting training</span>
+      <div class="grid">
+        <span class="y mono">2023</span><p class="n">Alexandra Reynolds &amp; Tom Afiyan<em>Movement for film and television</em></p>
+        <span class="y mono">2019 – 2022</span><p class="n">Actors Factory<span>Paris</span><em>Acting for camera</em></p>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="foot mono">
+      <span>Gladia Marchetti &middot; Dancer</span>
+      <span>2 / 2</span>
+    </div>
+  </main>
+</section>
+
+</div>
+
+<script>
+(function () {
+  var st = document.querySelector('.stage');
+  function fit() {
+    var w = document.documentElement.clientWidth;
+    var sw = st.offsetWidth;
+    var z = Math.min(1, (w - 24) / sw);
+    st.style.setProperty('--z', z);
+    st.style.setProperty('--x', Math.max(0, (w - sw * z) / 2) + 'px');
+    /* lo scale non riduce lo spazio occupato: si accorcia l'involucro a mano */
+    var h = st.scrollHeight;
+    document.body.style.height = (h * z + 40) + 'px';
+  }
+  fit();
+  addEventListener('resize', fit);
+})();
+</script>
+
+<script>
+/* TELEFONO E IPAD 10/9/2026. Dal telefono «Stampa» apre il PDF bianco, che ha gia' il formato di pagina giusto (decisione di Gladia,
+   10/9): il motore di stampa dei telefoni ignora @page. Sul computer resta window.print(). */
+(function () {
+  var b = document.querySelector('.tools button'); var a = document.querySelector('.tools a[download]');
+  if (!b || !a) return;
+  var pdf = a.getAttribute('href');
+  /* Safari (Mac) ignora @page, formato e margini, e aggiunge intestazione e pie': anche li' Stampa apre il PDF (Gladia, 10/9 ore 15). */
+  var safari = /Apple/.test(navigator.vendor || '') && !/CriOS|Chrome|Chromium|Edg/.test(navigator.userAgent || '');
+  b.addEventListener('click', function (e) {
+    if (window.matchMedia('(pointer:coarse)').matches || safari) { e.preventDefault(); e.stopImmediatePropagation(); window.open(pdf, '_blank'); }
+  }, true);
+})();
+</script>
+</body>
+</html>

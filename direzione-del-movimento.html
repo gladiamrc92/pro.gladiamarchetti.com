@@ -1,0 +1,2555 @@
+<!DOCTYPE html>
+<html lang="it" data-ui-lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<script>
+/* INDIRIZZI NELLA LINGUA 15/9/2026: ogni pagina ha l'indirizzo nella sua lingua (danza, danse, dance).
+   Un vecchio link con ?lang= porta alla sorella giusta, con il resto dell'indirizzo intatto. */
+window.GM_INDIRIZZI = { pagina: 'direzione-del-movimento', lingua: 'it', radice: false, mappa: {'home': {it: 'it', fr: 'fr', en: 'en'}, 'danza': {it: 'danza', fr: 'danse', en: 'dance'}, 'coreografia': {it: 'coreografia', fr: 'choregraphie', en: 'choreography'}, 'recitazione': {it: 'recitazione', fr: 'comedienne', en: 'acting'}, 'direzione-del-movimento': {it: 'direzione-del-movimento', fr: 'direction-du-mouvement', en: 'movement-direction'}, 'danza-cfranc': {it: 'danza-cfranc', fr: 'danse-cfranc', en: 'dance-c-franc'}, 'danza-paralimpiadi': {it: 'danza-paralimpiadi', fr: 'danse-paralympiques', en: 'dance-paralympics'}, 'coreografia-comme-si': {it: 'coreografia-comme-si', fr: 'choregraphie-comme-si', en: 'choreography-comme-si'}, 'coreografia-eteignons': {it: 'coreografia-eteignons', fr: 'choregraphie-eteignons-les-ecrans', en: 'choreography-eteignons'}, 'coreografia-inequality': {it: 'coreografia-inequality', fr: 'choregraphie-inequality', en: 'choreography-inequality'}, 'coreografia-inequality-film': {it: 'coreografia-inequality-film', fr: 'choregraphie-inequality-film', en: 'choreography-inequality-film'}, 'cv-danza': {it: 'cv-danzatrice', fr: 'cv-danseuse', en: 'dance-cv'}, 'cv-recitazione': {it: 'cv-attrice', fr: 'cv-comedienne', en: 'acting-cv'}, 'dossier-coreografia': {it: 'dossier-coreografia', fr: 'dossier-choregraphie', en: 'choreography-dossier'}, 'dossier-direzione': {it: 'dossier-direzione-del-movimento', fr: 'dossier-direction-du-mouvement', en: 'movement-direction-dossier'}} };
+(function () {
+  if (location.protocol === 'file:') return;
+  var G = window.GM_INDIRIZZI, q = new URLSearchParams(location.search), l = q.get('lang');
+  if (l && G.mappa[G.pagina][l] && l !== G.lingua) {
+    q.delete('lang'); var s = q.toString();
+    location.replace('/' + G.mappa[G.pagina][l] + (s ? '?' + s : '') + location.hash);
+  }
+})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="media/logo/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="media/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="media/logo/favicon-16.png">
+<link rel="apple-touch-icon" href="media/logo/favicon-180.png">
+<title>Gladia Marchetti · Direzione del movimento</title>
+<style>
+  @font-face {
+    font-family: "Playfair Display";
+    src: url(data:font/woff2;base64,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) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --ground: #0b1016;
+    --ground-soft: #131a22;
+    --ink: #e8e6dd;
+    --ink-dim: #8b96a3;
+    --ink-faint: #697d94;
+    --accent: #7ca0c2;
+    --accent-soft: rgba(124, 160, 194, 0.14);
+    --rule: rgba(232, 230, 221, 0.14);
+    --wordmark: var(--accent);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--ground);
+    color: var(--ink);
+    overscroll-behavior: none;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: "Playfair Display", "Big Caslon", Baskerville, Georgia, serif;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  /* frame, quiet by design */
+  .frame {
+    position: fixed;
+    inset: 1.1rem;
+    border: 1px solid var(--rule);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @media (max-width: 40rem) {
+    .frame { inset: 0.6rem; }
+  }
+
+  main {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8vh 6vw 6vh;
+    gap: clamp(2.5rem, 6vh, 4rem);
+  }
+
+  .wordmark {
+    margin: 0;
+    display: block;
+    width: min(90vw, 32rem);
+  }
+
+  .wordmark img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .wordmark .logo-dark {
+    display: none;
+  }
+
+  .wordmark .logo-light {
+    display: block;
+  }
+
+  .wordmark .logo-dark,
+  .wordmark .logo-light {
+    background-color: var(--ink);
+    -webkit-mask-image: var(--logo-mask);
+    mask-image: var(--logo-mask);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    aspect-ratio: 2000 / 590;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .wordmark .logo-light { display: none; }
+    .wordmark .logo-dark { display: block; }
+  }
+
+  :root[data-theme="dark"] .wordmark .logo-light { display: none; }
+  :root[data-theme="dark"] .wordmark .logo-dark { display: block; }
+  :root[data-theme="light"] .wordmark .logo-light { display: block; }
+  :root[data-theme="light"] .wordmark .logo-dark { display: none; }
+
+  footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 2rem 2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+  }
+
+  footer .rule {
+    width: 2.4rem;
+    height: 1px;
+    background: var(--rule);
+    margin: 0 auto 1rem;
+  }
+
+  .page {
+    position: relative;
+    z-index: 2;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 10vh 6vw 8vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .reel {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--ground-soft);
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--ink-faint);
+  }
+
+
+
+  .reel-cinema {
+    aspect-ratio: 2.35 / 1;
+    width: 100%;
+    align-self: stretch;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reel-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 8%;
+  }
+
+  .sound-toggle {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    border: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ===== La linguetta che invita a premere l'audio =====
+     Blocco identico su danza, recitazione e direzione del movimento.
+     Sta PRIMA del cerchio nel codice e il pulsante e' ancorato a destra,
+     quindi aprendosi spinge verso sinistra. Si apre su max-width e non su
+     width perche' il testo cambia lunghezza da lingua a lingua e un numero
+     scritto a mano andrebbe bene per una sola delle tre.
+     Compare da sola un secondo e mezzo dopo l'apertura e resta finche' non si
+     preme: versione scelta da Gladia il 13/8/2026 fra tre. */
+  .sound-toggle-label {
+    flex: none;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(3px);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 0;
+    border-radius: 1.3rem 0 0 1.3rem;
+    line-height: 1;
+    padding: 0.62rem 0;
+    transition: max-width 0.55s cubic-bezier(0.22, 0.9, 0.3, 1),
+                opacity 0.35s ease,
+                padding 0.55s cubic-bezier(0.22, 0.9, 0.3, 1);
+  }
+
+  .reel-cinema.is-invito .sound-toggle-label,
+  .sound-toggle:hover .sound-toggle-label,
+  .sound-toggle:focus-visible .sound-toggle-label {
+    max-width: 16rem;
+    opacity: 1;
+    padding: 0.62rem 1.5rem 0.62rem 0.95rem;
+  }
+
+  /* Acceso l'audio l'invito non serve piu', e non deve tornare nemmeno
+     passandoci sopra col mouse: per questo gli !important. */
+  .reel-cinema.is-unmuted .sound-toggle-label {
+    max-width: 0 !important;
+    opacity: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* I riquadri del mosaico non hanno la linguetta: li' il pulsante e' piccolo
+     e le didascalie stanno subito sotto. */
+
+  .sound-toggle-circle {
+    position: relative;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+
+  .sound-toggle-circle::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    animation: direzione-ring-pulse 2s ease-out infinite;
+  }
+
+  .reel-cinema.is-unmuted .sound-toggle-circle::after {
+    animation: none;
+    content: none;
+  }
+
+  @keyframes direzione-ring-pulse {
+    0% { transform: scale(0.85); opacity: 0.9; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+
+  .sound-toggle:hover .sound-toggle-circle {
+    transform: scale(1.08);
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .sound-mute-line {
+    opacity: 1;
+  }
+
+  .sound-wave {
+    opacity: 0;
+  }
+
+  .reel-cinema.is-unmuted .sound-mute-line {
+    opacity: 0;
+  }
+
+  .reel-cinema.is-unmuted .sound-wave {
+    opacity: 1;
+  }
+
+
+
+  .page-header {
+    padding: 2.6rem 0 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-header.is-closing {
+    padding: 2.6rem 0 0;
+    margin-bottom: 2.6rem;
+  }
+
+  .page-logo {
+    width: 10rem;
+    margin: 0;
+  }
+
+  .page-hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 2vh 0;
+  }
+
+
+
+
+
+
+
+
+  .work-credits .ruolo {
+    color: var(--accent);
+  }
+
+  @media (max-width: 56rem) {
+  }
+
+
+
+  .closing {
+    margin: 0;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+    color: var(--accent);
+  }
+
+
+
+
+
+
+
+  /* Su telefono la coda corta pesa piu della coerenza di larghezza:
+     righe pari, quindi balance invece di pretty. */
+  @media (max-width: 44rem) {
+  }
+
+  .line-connector {
+    display: flex;
+    justify-content: center;
+    background: var(--ground);
+    padding: 2rem 0 2rem;
+  }
+
+  .line-connector-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  .line-connector-link:hover,
+  .line-connector-link:focus-visible {
+    opacity: 1;
+  }
+
+  .connector-line {
+    width: 1px;
+    height: 7.5rem;
+    background: currentColor;
+  }
+
+  .connector-arrow {
+    font-size: 1.1rem;
+    line-height: 1;
+    margin-top: -0.3rem;
+  }
+
+  .page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+
+  .btn-square {
+    display: inline-block;
+    padding: 0.9em 1.8em;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .btn-square:hover,
+  .btn-square:focus-visible {
+    background: var(--ink);
+    color: var(--ground);
+  }
+
+  .closing-band {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    background: var(--accent);
+    color: var(--ground);
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 8vh 8vw;
+    text-align: center;
+  }
+
+  .closing-band .closing {
+    margin: 0;
+    max-width: 44ch;
+    white-space: nowrap;
+    font-style: italic;
+    font-family: "Playfair Display", "Big Caslon", Baskerville, Georgia, serif;
+    font-size: clamp(1rem, 2.6vw, 1.7rem);
+    color: var(--ground);
+  }
+
+  @media (max-width: 32rem) {
+    .closing-band .closing {
+      white-space: normal;
+      font-size: clamp(1.1rem, 5vw, 1.4rem);
+    }
+  }
+
+  .closing-band .btn-square {
+    border-color: var(--ground);
+    color: var(--ground);
+  }
+
+  .closing-band .btn-square:hover,
+  .closing-band .btn-square:focus-visible {
+    background: var(--ground);
+    color: var(--accent);
+  }
+
+  .closing-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+    margin: 0;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ground);
+  }
+
+  .closing-social a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--ground);
+    padding-bottom: 0.1em;
+    opacity: 0.7;
+  }
+
+  .closing-social a:hover,
+  .closing-social a:focus-visible {
+    opacity: 1;
+  }
+
+  .lang-select {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-self: flex-start;
+  }
+
+  .lang-select-row {
+    display: flex;
+    gap: 1.4rem;
+  }
+
+  .page-hero .lang-select {
+    align-self: center;
+    align-items: center;
+  }
+
+  .selftape-label { margin:0 0 0.9rem; font-size:0.58rem; letter-spacing:0.18em;
+    text-transform:uppercase; color:var(--ink-faint); text-align:center; }
+
+  .lang-tab {
+    background: none;
+    border: none;
+    padding: 0.2em 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .lang-tab.is-active {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .lang-tab:hover,
+  .lang-tab:focus-visible {
+    color: var(--ink);
+  }
+
+  .page-logo {
+    transition: opacity 0.2s ease;
+  }
+
+  .page-logo:hover,
+  .page-logo:focus-visible {
+    opacity: 0.6;
+  }
+
+  .page.is-standalone {
+    border-top: none;
+  }
+
+  [data-i18n] { }
+  html[data-ui-lang="it"] [data-i18n="en"] { display: none; }
+  html[data-ui-lang="it"] [data-i18n="fr"] { display: none; }
+  html[data-ui-lang="en"] [data-i18n="it"] { display: none; }
+  html[data-ui-lang="en"] [data-i18n="fr"] { display: none; }
+  html[data-ui-lang="fr"] [data-i18n="it"] { display: none; }
+  html[data-ui-lang="fr"] [data-i18n="en"] { display: none; }
+
+  .ui-lang-select {
+    position: fixed;
+    top: 1.4rem;
+    right: 1.6rem;
+    z-index: 20;
+    display: flex;
+    gap: 0.9rem;
+  }
+
+  .ui-lang-btn {
+    background: none;
+    border: none;
+    padding: 0.2em 0.1em;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .ui-lang-btn.is-active {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .ui-lang-btn:hover:not(.is-disabled),
+  .ui-lang-btn:focus-visible {
+    color: var(--ink);
+  }
+
+  .ui-lang-btn.is-disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
+
+  @media (max-width: 40rem) {
+    .ui-lang-select { top: 0.9rem; right: 1.1rem; gap: 0.7rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Cursore del video, uguale su tutte le pagine */
+  .reel-scrub-host { position: relative; }
+
+  .reel-scrub {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.6rem;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    z-index: 3;
+    touch-action: none;
+  }
+
+  .reel-scrub-line {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.22);
+    transition: height 0.18s ease, background 0.18s ease;
+  }
+
+  .reel-scrub:hover .reel-scrub-line,
+  .reel-scrub:focus-visible .reel-scrub-line,
+  .reel-scrub.is-dragging .reel-scrub-line {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .reel-scrub:focus { outline: none; }
+
+  .reel-scrub-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--accent);
+  }
+
+  .reel-scrub-knob {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: -0.375rem;
+    border-radius: 50%;
+    background: var(--accent);
+    transform: translateY(-50%) scale(0);
+    transition: transform 0.18s ease;
+  }
+
+  .reel-scrub:hover .reel-scrub-knob,
+  .reel-scrub:focus-visible .reel-scrub-knob,
+  .reel-scrub.is-dragging .reel-scrub-knob { transform: translateY(-50%) scale(1); }
+
+  .reel-clock {
+    position: absolute;
+    left: 1rem;
+    bottom: 1.2rem;
+    z-index: 3;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    pointer-events: none;
+  }
+
+  .reel-scrub-host:hover .reel-clock,
+  .reel-scrub-host.is-paused .reel-clock { opacity: 1; }
+
+  @media (max-width: 40rem) {
+    .reel-clock { opacity: 1; font-size: 0.62rem; left: 0.7rem; bottom: 1rem; }
+  }
+
+
+  /* Titolo principale della pagina: letto dai lettori di schermo e da Google,
+     invisibile a occhio. Il progetto non ha titoli scritti, l'identita' la
+     porta il logo, quindi senza questo la pagina non ha nessuna struttura
+     navigabile e l'unica identificazione e' il tag <title>.
+     Perche' NON display:none e NON visibility:hidden: quelle due lo tolgono
+     anche ai lettori di schermo, cioe' non risolverebbero niente.
+     L'unico punto delicato e' position:absolute, che si aggancia all'antenato
+     posizionato piu' vicino. Su queste pagine .photo-mosaic e' enorme, ed e'
+     lo stesso meccanismo che ha prodotto la virgoletta vagante l'11/8 e i tre
+     video alti 4171px il 13/8. Qui l'h1 sta come figlio diretto del body,
+     prima di qualunque contenitore posizionato, quindi l'antenato e' il body.
+     NON spostarlo dentro il mosaico.
+     Misurato il 14/8 su copia: 21 combinazioni di larghezza e lingua, nessun
+     altro elemento si sposta di un pixel. */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+
+  .salta-al-contenuto {
+    position: absolute;
+    left: 50%;
+    top: -100px;
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: 0.7em 1.4em;
+    background: var(--ink);
+    color: var(--ground);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0 0 4px 4px;
+    transition: top 0.18s ease;
+  }
+
+  .salta-al-contenuto:focus {
+    top: 0;
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+
+/* ==========================================================================
+   BOZZA EDITORIALE 14/8/2026. Blocchi nuovi, nessuna regola vecchia toccata.
+   ========================================================================== */
+
+/* Spostata il 15/8 da sopra il logo a sotto il video, su due righe: il video
+   dice che artista e', la riga subito sotto dice chi e dove. */
+.identity-line { width:100%; text-align:center; padding:1.4rem 1rem 0; }
+.identity-line p { margin:0; font-size:0.7rem; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--ink-faint); line-height:1.9; }
+.identity-line .identity-role { color:var(--accent); letter-spacing:0.24em; }
+/* 9/9/2026: con la quarta voce (Pubblicita') la riga di genere, su telefono,
+   andava a capo lasciando il punto mediano appeso e l'ultima voce da sola.
+   Il separatore fra la seconda e la terza voce ora sta nel CSS: su schermo
+   largo e' un punto mediano, sotto i 560px diventa l'a capo, cosi' le due
+   righe restano centrate e bilanciate (due voci ciascuna) e nessun separatore
+   resta a fine riga. */
+.identity-genre .genre-cut::before { content:"\00A0\00B7\00A0"; }
+@media (max-width:560px){
+  .identity-genre .genre-cut { display:block; }
+  .identity-genre .genre-cut::before { content:""; }
+}
+/* 16/8: la freccia stava a 19px dal testo e a 169px dal primo riquadro.
+   Ora sta in mezzo: stessa distanza sopra e sotto (misurato: 56 e 56). */
+.identity-line + .line-connector { padding:3.5rem 0 1rem; }
+#direzione.page { padding-top:0; }
+#direzione .works-mosaic { padding-top:2.5rem; }
+
+/* --- Mosaico dei lavori. Sfalsato come lo voleva Gladia, ma NEL FLUSSO:
+   niente position:absolute sui riquadri, quindi nessuna sovrapposizione
+   possibile e nessuna geometria da riverificare a ogni modifica. Lo sfalsamento
+   lo fanno larghezza variabile piu' margin auto. --- */
+.works-mosaic {
+  display:flex; flex-direction:column; gap:4.5rem;
+  width:min(100vw, 82rem); position:relative; left:50%;
+  transform:translateX(-50%); margin:0; padding:3.5rem 3rem 0;
+}
+.works-mosaic > * { width:var(--w, 50%); margin:0; }
+/* Il pulsante del CV prendeva il gap standard della sezione (2.2rem) e stava
+   attaccato all'ultimo riquadro. */
+.works-actions { margin-top:3rem; }
+/* 16/8: stessa taglia del titolo del Metodo su coreografia (clamp 2.4rem/4vw/56px),
+   cosi' le due pagine madri hanno una riga di voce dello stesso peso. */
+/* 16/8, terza versione: una riga sola, corsivo, con un filetto sopra e
+   sotto che la incornicia invece di lasciarla "piazzata li'". Sotto i 64rem
+   la riga puo' andare a capo. */
+/* 16/8 mattina: la riga sta dentro .page (40rem) ed e' nowrap, quindi
+   sbordava a destra e margin:auto non poteva centrarla (misurato a 1440:
+   centro testo 884, centro pulsante 720). Ora e' un flex item largo quanto
+   il suo testo, centrato da align-self anche quando e' piu' largo di .page. */
+.works-line { position:relative; margin:7.5rem 0 0; align-self:center; width:max-content;
+  max-width:min(100vw - 3rem, 64rem); padding:2.2rem 1.5rem; text-align:center;
+  font-style:italic; font-size:clamp(1.15rem, 1.6vw, 1.55rem); line-height:1.5; letter-spacing:0.01em;
+  color:var(--ink); white-space:nowrap; }
+.works-line::before, .works-line::after { content:""; position:absolute; left:50%; transform:translateX(-50%);
+  width:3.5rem; height:1px; background:var(--accent); }
+.works-line::before { top:0; } .works-line::after { bottom:0; }
+@media (max-width:64rem) { .works-line { white-space:normal; } }
+.works-line + .works-actions { margin-top:3.5rem; }
+/* 8/9/2026, conforme a Danza, Coreografia e Recitazione (chiesto da Gladia):
+   la frase di voce sale sotto la riga di identita', fuori da .page, centrata
+   con margin auto; la freccia riparte da li' con la stessa altezza di prima.
+   Regole copiate tali e quali da danza.html (2/9). */
+.works-line.is-hero { display:block; margin:2.4rem auto 0; padding:1.8rem 1.5rem; }
+.works-line.is-hero + .line-connector { padding:1.6rem 0 0.5rem; }
+.works-line.is-hero + .line-connector .connector-line { height:4rem; }
+/* 8/9: il pulsante del dossier chiude le fasce, dopo l'ultima lista. */
+.names-band .works-actions.is-end { margin-top:5rem; display:flex; justify-content:center; }
+.at-left  { margin-right:auto; }
+.at-right { margin-left:auto; }
+
+/* overflow visible e' il punto: la didascalia deve poter USCIRE dal riquadro,
+   come su delphinegaborit.com, dove sborda in basso a destra oltre la foto. */
+.work-tile { position:relative; overflow:visible; }
+
+.tile-media { position:relative; width:100%; aspect-ratio:16/9;
+  border:1px solid var(--rule); background-color:var(--ground-soft);
+  background-size:cover; background-position:center; overflow:hidden; }
+.at-left:first-child .tile-media { aspect-ratio:2.3529/1; }
+/* Niente cornice chiara attorno a foto e video: Gladia, 15/8, "su tutto il
+   sito, su tutte le pagine con le quali stiamo lavorando". */
+.tile-media, .work-cover, .work-frame, .book-item, .lightbox-media { border:0; }
+.tile-media video { width:100%; height:100%; object-fit:cover; display:block; }
+.tile-media .work-cover { aspect-ratio:auto; height:100%; border:0; }
+
+/* La didascalia e' ancorata all'angolo in basso a destra dell'immagine e
+   sborda oltre. right negativo, non left: cosi' cresce verso l'interno della
+   pagina e non puo' mai spingere fuori il bordo destro creando lo scorrimento
+   orizzontale. */
+/* 16/8 (bozza C, scelta da Gladia): i crediti non compaiono piu' al passaggio
+   sopra l'immagine, stanno SEMPRE visibili nella meta' vuota della fascia, sul
+   fondo, allineati al bordo basso del riquadro: a destra dei riquadri di
+   sinistra e a sinistra di quelli di destra. Il vuoto della scala diventa la
+   colonna dei titoli, e un direttore di casting legge i nomi senza gesto.
+   Il filetto e' lo stesso della citazione .works-line. */
+.tile-cap {
+  position:absolute; bottom:0;
+  display:flex; flex-direction:column;
+  max-width:24rem;
+}
+.tile-cap::before { content:""; display:block; width:3.5rem; height:1px; background:var(--accent); margin-bottom:0.9rem; }
+.at-left  .tile-cap { left:100%; margin-left:2.5rem; align-items:flex-start; text-align:left; }
+.at-right .tile-cap { right:100%; margin-right:2.5rem; align-items:flex-end; text-align:right; }
+
+.tile-role   { font-size:0.66rem; letter-spacing:0.22em; color:var(--accent); }
+.tile-title  { font-size:2.2rem; line-height:1.02; letter-spacing:0.01em;
+               color:var(--accent); margin:0.1rem 0; }
+.tile-client { font-size:0.72rem; letter-spacing:0.16em; color:var(--accent);
+               margin-top:0.35rem; }
+.tile-detail { font-size:0.6rem; letter-spacing:0.04em; line-height:1.6;
+               color:var(--ink-faint); margin-top:0.5rem; }
+
+@media (hover: none), (max-width:60rem) {
+  .tile-cap, .at-left .tile-cap, .at-right .tile-cap { position:static; margin:0.8rem 0 0;
+    align-items:flex-start; text-align:left; max-width:none; }
+  .tile-title { font-size:1.7rem; } }
+
+
+/* --- Leggibilita' dei crediti sopra l'immagine. Tre cose insieme, perche'
+   nessuna da sola basta su TUTTE le immagini: una foto chiarissima batte
+   l'ombra, una scurissima batte il velo.
+   1. un velo scuro sfumato nell'angolo in basso a destra, dove cade il testo
+   2. l'immagine che si abbassa di luminosita' del 18% al passaggio
+   3. un'ombra portata sotto il testo, che regge anche se le prime due non
+      bastassero su un'immagine fuori scala.
+   Valori scelti MISURANDO, non a occhio: col velo a 0.78 il contrasto fra
+   --accent (#c25a34) e un'immagine bianca sotto scendeva a 2.59:1, sotto la
+   soglia di 3.0 per il testo grande. A 0.93 sale sopra. --accent non si tocca
+   mai, quindi l'unica leva era il fondo.
+   Il velo compare SOLO al passaggio: a riposo l'immagine resta pulita. --- */
+/* 16/8: il velo scuro al passaggio e' stato tolto insieme al testo sopra
+   l'immagine (bozza C). Resta solo il leggero abbassamento di luminosita'. */
+
+.tile-media video,
+.tile-media .work-cover { transition:filter .35s ease; }
+.work-tile:hover .tile-media video,
+.work-tile:hover .tile-media .work-cover { filter:brightness(0.82); }
+
+.tile-cap { text-shadow:0 1px 10px rgba(8,12,12,0.85), 0 0 24px rgba(8,12,12,0.6); }
+/* 16/8: con la palette invertita l'ombra scura sotto le scritte si vede sull'arancione: via. */
+:root.palette-inversa .tile-cap { text-shadow:none; }
+
+.grid-quote { grid-column:1 / -1; max-width:34rem; margin:1.5rem 0; }
+.big-quote p { margin:0; }
+.da-confermare { color:#c8622f; letter-spacing:0.08em; }
+
+.band-kicker { margin:0 0 1.1rem; font-size:0.62rem; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--ink-faint); }
+
+/* --- Banda lavori: stessa struttura di coreografia, cinque riquadri --- */
+.works-band { width:100%; max-width:75rem; margin:0 auto; padding:6rem 1.5rem 0; }
+.works-row { display:grid; grid-template-columns:repeat(3,1fr); gap:2.2rem; }
+.works-row figure { margin:0; }
+.work-cover { position:relative; display:block; width:100%; aspect-ratio:16/9;
+  padding:0; border:1px solid var(--rule); background-color:var(--ground-soft);
+  background-size:cover; background-position:center; cursor:pointer; }
+.work-cover::after { content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(12,18,18,0.05), rgba(12,18,18,0.42));
+  transition:opacity .25s ease; }
+.work-play { position:absolute; inset:0; display:grid; place-items:center;
+  z-index:1; font-size:1.4rem; color:var(--ink); }
+.work-cover:hover::after, .work-cover:focus-visible::after { opacity:0.55; }
+.work-frame { width:100%; aspect-ratio:16/9; border:1px solid var(--rule); }
+
+/* --- Banda book. Masonry orizzontale, come il Photobook di Anne Fotso ma
+   coricato: riquadri piccoli di altezza e larghezza diverse, sfalsati in
+   verticale, dentro una striscia che scorre da sinistra a destra.
+   A TUTTA LARGHEZZA, senza margini: e' quello che la distingue dalle due
+   liste di testo qui sotto, che restano strette e centrate. Immagini larghe
+   e testo stretto e' il modo piu' economico per dire che sono due cose
+   diverse, senza aggiungere righe o titoli. --- */
+.book-band-wrap { width:100vw; position:relative; left:50%;
+  transform:translateX(-50%); margin:0; padding:7rem 0 0; }
+.book-band-wrap .band-kicker { padding-left:2rem; }
+
+.book-band {
+  overflow:hidden; padding:0 0 1.5rem; height:23.5rem;
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 4rem, #000 calc(100% - 4rem), transparent);
+  mask-image:linear-gradient(90deg, transparent, #000 4rem, #000 calc(100% - 4rem), transparent);
+}
+/* Il nastro scorre da solo, come su delphinegaborit.com. La copia duplicata
+   sopra rende il ritorno invisibile: si trasla di -50% esatto, cioe' della
+   lunghezza di UNA lista, e a fine ciclo il fotogramma coincide con quello
+   di partenza. Se si aggiunge o toglie una foto va aggiornata la copia,
+   altrimenti il salto si vede. */
+/* 16/8, richiesta di Gladia: il nastro va da solo, si ferma quando ci sei
+   sopra, e si puo' scorrere con trackpat/rotella o trascinare col mouse.
+   Quindi niente animazione CSS: e' un contenitore che scorre davvero
+   (overflow-x:auto) e un piccolo script lo fa avanzare da solo (scrollLeft)
+   finche' nessuno lo tocca. La lista e' sempre duplicata: arrivati a meta'
+   si torna a zero e non si vede il salto. */
+.book-track {
+  display:flex; align-items:flex-start; gap:0.9rem; width:max-content;
+}
+.book-band { overflow-x:auto; overflow-y:hidden; scrollbar-width:none; cursor:grab;
+  -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain; }
+.book-band::-webkit-scrollbar { display:none; }
+.book-band.is-dragging { cursor:grabbing; user-select:none; }
+.book-band.is-dragging .book-item { pointer-events:none; }
+.book-item {
+  flex:0 0 auto; padding:0; cursor:pointer;
+  width:var(--w); height:var(--h); margin-top:var(--top, 0);
+  border:0; background-color:var(--ground-soft);
+  background-size:cover; background-position:center;
+  filter:saturate(0.82);
+  transition:width .35s ease, filter .35s ease;
+}
+.book-item:hover, .book-item:focus-visible {
+  width:calc(var(--w) * 1.3); filter:saturate(1);
+}
+.book-hint { margin:1.2rem 0 0; padding-left:2rem; font-size:0.58rem;
+  letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-faint); }
+
+.lightbox { position:fixed; inset:0; z-index:60; display:grid; place-items:center;
+  background:rgba(8,12,12,0.94); padding:2rem; }
+.lightbox[hidden] { display:none; }
+.lightbox-img { max-width:100%; max-height:90vh; object-fit:contain; }
+.lightbox-close { position:absolute; top:1rem; right:1.4rem; z-index:1;
+  background:none; border:0; color:#fff; font-size:2rem; line-height:1; cursor:pointer; }
+/* Frecce della galleria del book (16/8): solo per le foto, non per i video. */
+.lightbox-nav { position:absolute; top:50%; transform:translateY(-50%); z-index:1;
+  background:none; border:0; color:#fff; font-size:3.2rem; line-height:1; padding:0.4rem 1rem;
+  cursor:pointer; opacity:0.75; }
+.lightbox-nav:hover, .lightbox-nav:focus-visible { opacity:1; }
+.lightbox-nav.is-prev { left:0.6rem; } .lightbox-nav.is-next { right:0.6rem; }
+@media (max-width:40rem) { .lightbox-nav { font-size:2.4rem; padding:0.2rem 0.5rem; } }
+
+/* --- Banda nomi. Il difetto segnalato da Gladia il 14/8: stava incollata
+   alla fascia arancione di chiusura. Il respiro sotto e' volutamente piu'
+   grande di quello sopra, perche' e' l'ultimo blocco prima di un cambio di
+   colore netto e senza stacco i due si leggono come uno solo. --- */
+.names-band {
+  width:100%; max-width:66rem; margin:0 auto;
+  padding:7rem 2rem 9rem; text-align:center;
+}
+.names-band .band-kicker { margin:0 0 1.8rem; }
+.names-band .names-rule + .band-kicker { margin-top:0; }
+
+/* 9/9/2026: sotto ogni radice il suo credito, cosi' i nomi arrivano sulla
+   pagina senza promettere una direzione del movimento che non c'e': ogni nome
+   sta sotto il mestiere con cui e' stato fatto. Jeunet resta fuori apposta,
+   era controfigura luci e sotto "Recitazione" sarebbe falso. */
+/* 9/9/2026: con i crediti sotto, le tre voci hanno larghezze diverse e il
+   flex centrato lasciava la voce di mezzo 17 px a destra del centro (misurato).
+   Tre colonne uguali rimettono DANZA esattamente sotto RADICI. */
+.names-list.is-roots { display:grid; grid-template-columns:repeat(3, minmax(0,1fr));
+  justify-items:center; gap:0 1.5rem; }
+.names-list.is-roots li { text-align:center; }
+@media (max-width:560px){ .names-list.is-roots { grid-template-columns:1fr; gap:1.6rem 0; } }
+.names-list .root-cred { display:block; font-size:0.6rem; letter-spacing:0.1em;
+  text-transform:none; color:var(--ink-faint); margin-top:0.45rem; max-width:19rem;
+  line-height:1.55; }
+.names-list {
+  list-style:none; display:flex; flex-wrap:wrap; justify-content:center;
+  gap:1.1rem 2.6rem; margin:0; padding:0;
+  font-size:1.05rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--ink);
+}
+.names-list.is-battles { display:flex; justify-content:center; }
+.names-list.is-battles .is-win b { font-size:1.25rem; color:var(--accent); }
+.names-list.is-battles .is-win span { font-size:0.68rem; letter-spacing:0.18em;
+  text-transform:uppercase; }
+.battles-rest { margin:1.4rem auto 0; max-width:40rem;
+  font-size:0.62rem; letter-spacing:0.05em; line-height:1.8; color:var(--ink-faint); }
+
+
+/* La lightbox tiene tre cose: una foto del book, oppure il video INTERO di un
+   lavoro con i suoi crediti sotto. E' la risposta a "clicchi ed entri e vedi
+   tutto" senza costruire sei sottopagine in tre lingue: stesso indirizzo,
+   stessa pagina, il contenuto si apre sopra. */
+.lightbox-inner { width:min(94vw, 76rem); display:flex; flex-direction:column;
+  align-items:center; gap:1.2rem; }
+/* Larghezza legata all'altezza dello schermo: con le miniature sotto, su un
+   portatile da 900px il video a tutta larghezza usciva dal fondo. */
+.lightbox-media { width:100%; aspect-ratio:16/9; background:#000; }
+.lightbox-inner { width:min(94vw, 76rem, calc(66vh * 16 / 9)); max-height:96vh; overflow:auto; }
+.lightbox-media iframe, .lightbox-media video { width:100%; height:100%; border:0; display:block; }
+.lightbox-cap { width:100%; text-align:left; color:#efe9e2; }
+.lightbox-cap .lb-role { font-size:0.6rem; letter-spacing:0.22em; color:var(--accent); }
+.lightbox-cap .lb-title { font-size:1.9rem; line-height:1.1; color:var(--accent); margin:0.2rem 0; }
+.lightbox-cap .lb-detail { font-size:0.66rem; letter-spacing:0.04em; line-height:1.7; opacity:0.75; }
+/* Miniature sotto il video: le foto del progetto (15/8, sul modello di Anne
+   Fotso: immagini che dicono "c'ero" accanto al video). La prima e' il video
+   stesso, cosi' si torna indietro con un clic. */
+.lightbox-thumbs { width:100%; display:flex; flex-wrap:wrap; gap:0.5rem; }
+.lightbox-thumbs button { flex:0 0 auto; width:7.5rem; height:5rem; padding:0; border:1px solid transparent;
+  background:#111 center/cover no-repeat; cursor:pointer; opacity:0.7; transition:opacity .2s, border-color .2s; }
+.lightbox-thumbs button:hover, .lightbox-thumbs button:focus-visible { opacity:1; }
+.lightbox-thumbs button.is-current { opacity:1; border-color:var(--accent); }
+.lightbox-thumbs button.is-video { display:grid; place-items:center; color:#efe9e2; font-size:1.4rem; }
+.lightbox-media.is-photo { background:#000; }
+.lightbox-media img { width:100%; height:100%; object-fit:contain; display:block; }
+.is-apribile { cursor:pointer; }
+.is-apribile .tile-media { transition:transform .35s ease; }
+.is-apribile:hover .tile-media { transform:scale(1.012); }
+
+.names-rule {
+  width:4rem; height:1px; background:var(--rule);
+  margin:4.5rem auto 3.2rem;
+}
+.names-list.is-second {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));
+  gap:2.2rem 2.6rem; text-transform:none; letter-spacing:0.04em;
+}
+.names-list.is-battles { display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(13rem, 1fr));
+  gap:1.6rem 2.6rem; text-transform:none; letter-spacing:0.04em; }
+/* L'ultima voce va nella TERZA colonna, non nella seconda: con cinque voci
+   su tre colonne la quinta restava da sola sotto il centro e la fascia si
+   leggeva sbilanciata. Cosi' si allinea sotto la voce in alto a destra e le
+   due righe si chiudono simmetriche. Segnalato da Gladia il 15/8: voleva
+   spostata solo quella, non tutta la fascia a destra.
+   Sotto i 44rem la griglia va a una colonna sola e forzare la terza
+   spingerebbe la voce fuori: li' la regola si annulla. */
+.names-list.is-second li:last-child { grid-column: 3; }
+@media (max-width: 44rem) {
+  .names-list.is-second li:last-child { grid-column: auto; }
+}
+.names-list.is-second li,
+.names-list.is-battles li { display:flex; flex-direction:column; gap:0.35rem; }
+.names-list.is-battles b,
+.names-list.is-second b {
+  font-weight:400; font-size:0.95rem; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--ink);
+}
+/* 15/8: in grande va la cosa che vale (Cannes, Amman, 75&nbsp;repliche, il
+   coreografo), non il nome della compagnia. Le righe sono piu' lunghe, quindi
+   corpo e spaziatura un filo piu' stretti e fascia piu' larga, cosi' ognuna
+   sta su una riga sola e le due file restano allineate. */
+.names-band { max-width:76rem; }
+.names-list.is-second b { font-size:0.84rem; letter-spacing:0.1em; white-space:nowrap; }
+.names-list.is-second { grid-template-columns:repeat(auto-fit, minmax(19rem, 1fr)); }
+@media (max-width:1px) { .names-list.is-second b { white-space:normal; } }
+.names-list.is-battles span,
+.names-list.is-second span { font-size:0.62rem; letter-spacing:0.05em;
+  line-height:1.6; color:var(--ink-faint); }
+
+@media (max-width:1px) {
+  .works-mosaic { gap:4rem; padding-top:2rem; }
+  .works-mosaic > * { width:100% !important; margin:0; }
+  .works-row { grid-template-columns:1fr; gap:2.6rem; }
+  .book-item:hover { width:var(--w); }
+}
+
+/* Chi ha chiesto meno movimento non deve subire l'allargamento al passaggio. */
+@media (prefers-reduced-motion: reduce) {
+  .book-item { transition:none; }
+}
+
+
+/* ==========================================================================
+   DIREZIONE DEL MOVIMENTO, bozza editoriale 16/8/2026. Regole solo di questa
+   pagina, sopra ai blocchi copiati da danza.html qui sopra.
+   ========================================================================== */
+/* Collage del lavoro, sul modello del film di recitazione: video in grande che
+   parte da solo (con cursore e audio), due fotogrammi sotto, crediti sempre
+   visibili. Compatto: Gladia, 16/8, "preferisco il design di recitazione". */
+/* 8/9/2026, conforme alle altre pagine (Gladia: "i media sono ancora troppo
+   grandi rispetto alle altre pagine", poi "i crediti sotto, come Recitazione",
+   e "i media e i crediti nella stessa schermata"). Bozza L3 scelta da lei fra
+   sedici provate. Video a tutta larghezza del blocco e INTERO in 16/9:
+   tagliarlo in 2.35 taglia teste e corpi (verificato su tutti i 4075
+   fotogrammi: contenuto nella fascia alta nel 35%, in quella bassa nel 78%),
+   e il clip non e' suo. Sotto, TRE fotogrammi in fila, poi i crediti a tutta
+   larghezza come su Recitazione. Larghezza 48rem: e' il punto in cui il
+   blocco (video 432 + fila 137 + crediti 102 + spazi) fa 709, cioe'
+   l'altezza del collage di Recitazione. Con due fotogrammi soli il video
+   scendeva a 608 (troppo stretto per lei); con i crediti accanto ai
+   fotogrammi (bozza H) stava a 928 ma lei li vuole sotto; a 928 con i
+   crediti sotto (bozza I) veniva 870 e non stava in una schermata da 720 px
+   sul suo Mac. Il blocco era 1314 prima di oggi. */
+.dm-collage { display:grid; grid-template-columns:repeat(3, 1fr); grid-template-rows:auto auto auto;
+  gap:1.2rem; align-items:stretch; }
+.dm-reel { grid-column:1 / -1; grid-row:1; aspect-ratio:16/9; border:0; width:100%; align-self:auto; }
+.dm-reel .reel-video { object-position:center; }
+.dm-still-wide { grid-column:1; grid-row:2; }
+.dm-still-terzo { grid-column:2; grid-row:2; }
+.dm-still-tall { grid-column:3; grid-row:2; }
+/* Il ritratto e' un fotogramma 16/9 nativo (1920x1080): in fila si vede intero. */
+.dm-still-tall .tile-media { aspect-ratio:16/9; height:auto; min-height:0; }
+.dm-credits { grid-column:1 / -1; grid-row:3; }
+.works-mosaic > .dm-collage { width:min(100%, 48rem); margin:0 auto; }
+@media (max-width:1px) {
+  .dm-collage { grid-template-columns:1fr; }
+  .dm-reel, .dm-still-wide, .dm-still-terzo, .dm-still-tall, .dm-credits { grid-column:1; grid-row:auto; }
+}
+/* Crediti sempre visibili sotto il video, come su recitazione (il loro crash
+   test del 15/8: con un solo credito professionale, si legge sempre, non al
+   passaggio del mouse). Testo a sinistra, allineato al bordo del video. */
+.fc-credits { text-align:left; padding-top:0.6rem; }
+.fc-credits p { margin:0; }
+.fc-role   { font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); }
+.fc-title  { font-size:2.4rem; line-height:1.1; color:var(--accent); margin:0.6rem 0 0.9rem; }
+.fc-client { font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink); line-height:1.8; }
+.fc-detail { font-size:0.62rem; letter-spacing:0.04em; line-height:1.9; color:var(--ink-faint); margin-top:0.8rem; }
+/* Schermo intero sul clip (16/8), stesso pulsante delle sottopagine di danza
+   (.sub-full di danza-paralimpiadi.html): compare al passaggio del mouse o
+   con l'audio acceso. A schermo intero il video si vede tutto (contain). */
+.dm-reel .sub-full { position:absolute; top:1rem; right:1rem; z-index:2; width:2.2rem; height:2.2rem; border-radius:50%;
+  border:1.5px solid rgba(255,255,255,0.7); background:rgba(0,0,0,0.35); backdrop-filter:blur(3px); color:#fff;
+  display:flex; align-items:center; justify-content:center; cursor:pointer; padding:0; opacity:0;
+  transition:opacity .3s ease, transform .25s ease; }
+.dm-reel:hover .sub-full, .dm-reel .sub-full:focus-visible, .dm-reel.is-unmuted .sub-full { opacity:1; }
+.dm-reel .sub-full:hover { transform:scale(1.08); background:rgba(0,0,0,0.5); }
+.dm-reel:fullscreen .reel-video { object-fit:contain; background:#000; }
+/* Fotogrammi dello stesso lavoro: la didascalia resta nascosta (serve solo alla
+   lightbox), quindi al passaggio niente velo scuro e niente abbassamento di
+   luce, che senza testo da leggere sarebbero un effetto a vuoto. */
+.is-still .tile-cap { display:none; }
+.is-still .tile-media::after { display:none; }
+.work-tile.is-still:hover .tile-media video,
+.work-tile.is-still:hover .tile-media .work-cover { filter:none; }
+/* La riga di voce: dal 16/8 danza.html la fa gia' su una riga sola, corsiva
+   e piu' piccola, con filetto sopra e sotto. Qui si eredita cosi' com'e'.
+   Una cosa in piu': dentro .page (flex column, 40rem) una riga nowrap piu'
+   larga della colonna sborda a destra e il centro del testo finisce a 164 px
+   dal centro della pagina (misurato a 1440 su danza). align-self:center la fa
+   larga quanto il testo e la centra davvero. Segnalato alla sessione danza. */
+#direzione .works-line { align-self:center; margin-left:0; margin-right:0; }
+/* Radici: le tre pagine sorelle sono link veri. */
+.names-list a { color:inherit; text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:0.15em; }
+.names-list a:hover, .names-list a:focus-visible { border-bottom-color:var(--accent); color:var(--accent); outline:none; }
+/* Le liste della fascia nomi qui hanno una voce sola: la regola di danza che
+   spinge l'ultima voce nella terza colonna (pensata per cinque voci) qui non
+   deve valere. */
+.names-list.is-second li:last-child { grid-column:auto; }
+
+/* 8/9, passo 2: 8 lettori su 9 leggevano il vuoto fra i crediti del clip e
+   "Formazione" come fine pagina. Da 184 px (lo scarto di Danza) a 112. */
+#direzione.page { padding-bottom:2rem; }
+#direzione + .names-band { padding-top:3rem; }
+
+/* ===== TELEFONO E IPAD 10/9/2026 (passo 8, rilievi di Gladia dal telefono vero) ===== */
+.spezza .sep { display:block; height:0; overflow:hidden; font-size:0; line-height:0; }
+/* A4: senza mouse il tocco non deve far sparire i crediti */
+@media (hover:none), (max-width:60rem) {
+  .work-tile:hover .tile-cap, .work-tile:focus-within .tile-cap,
+  .work-tile:hover .tile-cap *, .work-tile:focus-within .tile-cap * { opacity:1 !important; transform:none !important; }
+}
+/* A5: schermo intero sul reel (disegno di .fc-full di Recitazione) */
+.reel-full { position:absolute; top:1rem; right:1rem; z-index:3; width:2.2rem; height:2.2rem; border-radius:50%;
+  border:1px solid rgba(255,255,255,0.35); background:rgba(0,0,0,0.35); color:#fff; display:flex; align-items:center;
+  justify-content:center; cursor:pointer; padding:0; opacity:0; transition:opacity .2s ease, transform .2s ease; }
+.reel:hover .reel-full, .reel-full:focus-visible { opacity:1; }
+@media (hover:none) { .reel-full { opacity:1; } }
+.reel:fullscreen { background:#000; }
+.reel:fullscreen .reel-video { object-fit:contain; }
+/* il riquadro YouTube non deve mai essere piu' largo dello spazio che ha */
+.lightbox-inner { max-width:100%; }
+
+/* ---- fra 66 e 80rem (iPad in orizzontale, portatili piccoli): le liste dei crediti restano a colonne come sul sito,
+        ma centrate con l'aria ai lati; a 1180 px la fascia prende tutto lo schermo e le colonne toccavano i bordi ---- */
+@media (min-width:66.01rem) and (max-width:80rem) {
+  /* SOLO le liste delle pagine principali (fascia dei crediti); le sottopagine tengono la griglia del sito */
+  .names-band .names-list.is-second, .names-band .names-list.is-roots { max-width:64rem; margin-left:auto; margin-right:auto; }
+  .names-band .names-list.is-second:has(li:nth-child(3)) { grid-template-columns:1fr auto 1fr; }
+}
+
+/* ---- fino a 66rem: telefoni e iPad in verticale ---- */
+@media (min-width:66.01rem) { .solo-stretto { display:none !important; } }
+@media (max-width:66rem) {
+  .solo-largo-stretto { display:none !important; }
+  /* G1: primo schermo */
+  .page-hero { min-height:auto; padding:1.1rem 0 0; }
+  .identity-line { padding:1rem 1rem 0; }
+  .works-line.is-hero { margin:1.7rem auto 0; padding:0.6rem 1.2rem; text-align:center; text-wrap:balance; }
+  .works-line.is-hero + .line-connector, .identity-line + .line-connector { padding:1rem 0 0.6rem; }
+  .line-connector .connector-line { height:2.6rem; }
+  /* K: la frase con gli a capo scelti a mano per lingua */
+  .works-line.is-hero.solo-stretto { text-wrap:initial; font-size:1.15rem; padding:0.6rem 1rem; max-width:calc(100vw - 2rem); }
+  /* N: linguette del video sopra il video (telefono e iPad) */
+  .page-hero.linguette-sopra { display:flex; flex-direction:column; align-items:stretch; }
+  .page-hero.linguette-sopra .lang-select { order:-1; margin:0 0 0.6rem; flex-direction:row; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:0.2rem 1.2rem; }
+  .page-hero.linguette-sopra .selftape-label { flex:0 0 100%; margin:0 0 0.15rem; }
+  .page-hero.linguette-sopra .lang-select-row { gap:1.2rem; }
+  /* lightbox: 94vw dentro 2rem di margine sbordava */
+  .lightbox { padding:1rem; }
+  .lightbox-inner { width:100%; }
+  /* W: le fasce dei crediti in fondo meno alte (erano 7rem sopra e 9 sotto), la fascia arancione pure */
+  .names-band, .page > .names-band { padding-top:4.5rem; padding-bottom:5rem; }
+  .closing-band { padding-top:4rem; padding-bottom:4rem; }
+  /* V: le liste di crediti a righe centrate, mai voci spinte ai bordi ne' tagliate; la terza voce sola sta al centro */
+  .names-list.is-second, .names-list.is-roots { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem 2.5rem; }
+  .names-list.is-second li, .names-list.is-roots li { flex:0 0 100%; max-width:none; grid-column:auto !important; text-align:center; padding:0; margin:0; }
+  .names-list.is-second b, .names-list.is-roots b { white-space:normal; display:block; }
+  .names-list.is-second span, .names-list.is-roots span { white-space:normal; }
+  .names-list.is-second li.is-lungo { order:9; }
+  .names-list .root-cred { margin-left:auto; margin-right:auto; }
+  /* M: le liste di interpreti a due colonne anche sull'iPad (in una riga sola erano disperse) */
+  .names-list.is-cast { display:grid; grid-template-columns:1fr 1fr; gap:0.7rem 0.8rem; font-size:0.82rem; letter-spacing:0.14em; justify-items:center; text-align:center; max-width:22rem; margin:0 auto; }
+  .names-list.is-cast li { white-space:normal; }
+  .names-list.is-cast li[data-i18n] { display:none; }
+  html[data-ui-lang="it"] .names-list.is-cast li[data-i18n="it"], html[data-ui-lang="en"] .names-list.is-cast li[data-i18n="en"], html[data-ui-lang="fr"] .names-list.is-cast li[data-i18n="fr"] { display:block; }
+}
+
+/* ---- fino a 44rem: solo telefoni ---- */
+@media (min-width:44.01rem) { .solo-telefono { display:none !important; } }
+@media (max-width:44rem) {
+  .solo-largo { display:none !important; }
+  /* corpo della frase 16 px: le due righe entrano anche a 390 px */
+  .works-line.is-hero.solo-stretto { font-size:16px; padding:0.6rem 0.5rem; max-width:calc(100vw - 1.6rem); }
+  /* A2: i crediti in fondo piu' vicini al mosaico */
+  .names-band, .page > .names-band { padding-top:3rem; }
+  .sub-credits { padding-top:3.2rem; }
+  /* A3: le marche a righe giustificate, ultima riga centrata, nomi interi */
+  .names-list.is-brands { display:block; text-align:justify; text-align-last:center; line-height:2.4; font-size:0.82rem; letter-spacing:0.14em; white-space:normal; }
+  .names-list.is-brands li { display:inline-block; margin:0 0.3rem; white-space:nowrap; }
+  /* D: crediti delle sottopagine centrati */
+  .fc-credits { text-align:center; }
+  /* E: il rimando al cortometraggio, sottolineatura che non pesta la riga dopo */
+  .sub-crosslink a { border-bottom:0; text-decoration:underline; text-underline-offset:0.4em; text-decoration-thickness:1px; line-height:2.1; }
+}
+
+@media (max-width:44rem) {
+  .identity-line { padding-top:0; }
+  .line-connector + .works-line.is-hero { margin:2.6rem auto 0; }
+  .line-connector ~ .works-line.is-hero { margin-bottom:2.2rem; }
+  .works-line.is-hero.solo-stretto { text-wrap:balance; }
+  /* G4: gli ambiti uno per riga, anche in francese che starebbe su una riga */
+  .identity-genre.solo-telefono .sep { display:block; height:0; overflow:hidden; font-size:0; line-height:0; }
+}
+</style>
+<!-- ANTEPRIME DEL LINK 11/9/2026: come appare il link quando lo si manda. Testo scritto dai madrelingua. -->
+<meta name="description" content="Movement director per il cinema e le serie tv, la moda, i videoclip e la pubblicità.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gladia Marchetti">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://gladiamarchetti.com/direzione-del-movimento">
+<meta property="og:title" content="Gladia Marchetti · Direzione del movimento">
+<meta property="og:description" content="Movement director per il cinema e le serie tv, la moda, i videoclip e la pubblicità.">
+<meta property="og:image" content="https://gladiamarchetti.com/media/anteprime/direzione-del-movimento.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gladia Marchetti">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gladia Marchetti · Direzione del movimento">
+<meta name="twitter:description" content="Movement director per il cinema e le serie tv, la moda, i videoclip e la pubblicità.">
+<meta name="twitter:image" content="https://gladiamarchetti.com/media/anteprime/direzione-del-movimento.jpg">
+<!-- INDIRIZZI NELLA LINGUA 15/9/2026 -->
+<link rel="canonical" href="https://gladiamarchetti.com/direzione-del-movimento">
+<link rel="alternate" hreflang="en" href="https://gladiamarchetti.com/movement-direction">
+<link rel="alternate" hreflang="it" href="https://gladiamarchetti.com/direzione-del-movimento">
+<link rel="alternate" hreflang="fr" href="https://gladiamarchetti.com/direction-du-mouvement">
+<link rel="alternate" hreflang="x-default" href="https://gladiamarchetti.com/movement-direction">
+</head>
+<script>
+/* ANTEPRIME DEL LINK 11/9/2026: questa copia si apre in it e ci resta, anche dove il browser non lascia
+   scrivere in memoria (browser dentro le app, navigazione privata). Se pero' la persona sceglie
+   un'altra lingua, comanda lei. */
+(function () {
+  var L = 'it', scelta = false, mioClic = false;
+  try { localStorage.setItem('gm-portfolio-lang', L); } catch (e) {}
+  document.documentElement.setAttribute('data-ui-lang', L);
+  document.documentElement.lang = L;
+  function ascolta() {
+    document.querySelectorAll('.ui-lang-btn').forEach(function (b) {
+      if (b.dataset.gmAscolto) return;
+      b.dataset.gmAscolto = '1';
+      b.addEventListener('click', function () { if (!mioClic) scelta = true; }, true);
+    });
+  }
+  function forza() {
+    ascolta();
+    if (scelta) return;
+    if (document.documentElement.getAttribute('data-ui-lang') === L) return;
+    var b = document.querySelector('.ui-lang-btn[data-ui-lang="' + L + '"]');
+    if (b) { mioClic = true; window.__gmClicAutomatico = true; b.click(); window.__gmClicAutomatico = false; mioClic = false; }
+    else {
+      document.documentElement.setAttribute('data-ui-lang', L);
+      document.documentElement.lang = L;
+    }
+  }
+  document.addEventListener('DOMContentLoaded', forza);
+  window.addEventListener('load', forza);
+  [0, 50, 200, 600, 1500].forEach(function (t) { setTimeout(forza, t); });
+})();
+</script>
+<body data-primo-schermo="fondo">
+
+<h1 class="sr-only" data-i18n="it">Gladia Marchetti, direzione del movimento</h1>
+<h1 class="sr-only" data-i18n="en">Gladia Marchetti, movement direction</h1>
+<h1 class="sr-only" data-i18n="fr">Gladia Marchetti, direction du mouvement</h1>
+
+<a class="salta-al-contenuto" href="#contenuto" data-i18n="it">Salta al contenuto</a>
+<a class="salta-al-contenuto" href="#contenuto" data-i18n="en">Skip to content</a>
+<a class="salta-al-contenuto" href="#contenuto" data-i18n="fr">Aller au contenu</a>
+
+<div class="frame" aria-hidden="true"></div>
+
+<div class="ui-lang-select" role="group" aria-label="Lingua / Language" data-i18n-aria-it="Lingua / Language" data-i18n-aria-en="Language" data-i18n-aria-fr="Langue / Language">
+  <button class="ui-lang-btn is-active" type="button" data-ui-lang="en">EN</button>
+  <button class="ui-lang-btn" type="button" data-ui-lang="fr">FR</button>
+  <button class="ui-lang-btn" type="button" data-ui-lang="it">IT</button>
+</div>
+
+<div class="page-header">
+  <a class="wordmark page-logo" href="/it" data-gm-pagina="home" aria-label="Torna al portfolio" data-i18n-aria-it="Torna al portfolio" data-i18n-aria-en="Back to portfolio" data-i18n-aria-fr="Retour au portfolio">
+    <span class="logo-light" role="img" aria-label="Gladia Marchetti" style="--logo-mask: url(&quot;media/logo/logo-light.png&quot;);"></span>
+    <span class="logo-dark" role="img" aria-label="Gladia Marchetti" style="--logo-mask: url(&quot;media/logo/logo-dark.png&quot;);"></span>
+  </a>
+</div>
+
+<!-- tabindex="-1" non e' decorativo: senza, molti browser fanno scorrere la
+     pagina ma NON spostano il fuoco della tastiera. role="main" su un div e
+     non su <main>: su questa pagina esiste una regola main {display:flex} che
+     schiaccerebbe tutto (crash test tecnico del 14/8). -->
+<div id="contenuto" role="main" tabindex="-1" aria-label="Contenuto principale" data-i18n-aria-it="Contenuto principale" data-i18n-aria-en="Main content" data-i18n-aria-fr="Contenu principal">
+<div class="page-hero linguette-sopra">
+  <div class="reel reel-cinema" id="direzione-reel" aria-label="Video, Direzione del movimento" data-i18n-aria-it="Video, Direzione del movimento" data-i18n-aria-en="Video, Movement direction" data-i18n-aria-fr="Vidéo, Direction du mouvement">
+    <button class="reel-full" type="button" id="direzione-reel-full" aria-label="Schermo intero" data-i18n-aria-it="Schermo intero" data-i18n-aria-en="Full screen" data-i18n-aria-fr="Plein &eacute;cran"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    <video class="reel-video" id="direzione-video" playsinline muted loop preload="none" data-avvia-in-vista poster="media/direzione-del-movimento/md-en-cinema-poster.jpg">
+      <source id="direzione-video-source" src="media/direzione-del-movimento/md-en-cinema.mp4" type="video/mp4">
+    </video>
+    <button class="sound-toggle" type="button" id="direzione-sound-toggle" aria-label="Attiva audio"
+            data-i18n-aria-it="Attiva audio" data-i18n-aria-en="Turn on sound" data-i18n-aria-fr="Activer le son"
+            data-aria-off-it="Attiva audio" data-aria-off-en="Turn on sound" data-aria-off-fr="Activer le son"
+            data-aria-on-it="Disattiva audio" data-aria-on-en="Turn off sound" data-aria-on-fr="Couper le son">
+      <!-- La linguetta che invita a premere. E' aria-hidden perche' il nome
+           vero del pulsante resta l'aria-label qui sopra, che dice l'azione
+           ("Attiva audio"): questa dice il motivo, non l'azione, e ripeterla
+           a un lettore di schermo confonderebbe e basta. -->
+      <span class="sound-toggle-label mono" aria-hidden="true"
+            data-i18n-text-it="Con l’audio è meglio"
+            data-i18n-text-en="Best with sound"
+            data-i18n-text-fr="Le son, c’est mieux">Con l’audio è meglio</span>
+      <span class="sound-toggle-circle">
+        <svg class="sound-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path fill="currentColor" d="M4 9v6h4l5 5V4L8 9H4z"/>
+          <path class="sound-wave" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M16.5 8.5a5 5 0 0 1 0 7"/>
+          <path class="sound-wave" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M19 6a8.5 8.5 0 0 1 0 12"/>
+          <path class="sound-mute-line" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M15.5 6.5l5 11"/>
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <div class="lang-select mono" role="tablist" aria-label="Lingua del video" data-i18n-aria-it="Lingua del video" data-i18n-aria-en="Video language" data-i18n-aria-fr="Langue de la vidéo">
+    <p class="selftape-label mono" data-i18n="it">Presentazione</p>
+    <p class="selftape-label mono" data-i18n="en">Introduction</p>
+    <p class="selftape-label mono" data-i18n="fr">Présentation</p>
+    <div class="lang-select-row">
+      <button class="lang-tab is-active" type="button" data-lang="en">EN</button>
+      <button class="lang-tab" type="button" data-lang="fr">FR</button>
+      <button class="lang-tab" type="button" data-lang="it">IT</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="identity-line">
+  <p class="mono identity-role" data-i18n="it">Movement director</p>
+  <p class="mono identity-role" data-i18n="en">Movement director</p>
+  <p class="mono identity-role" data-i18n="fr">Movement director</p>
+  <!-- 8/9/2026, scelta da Gladia: riga di genere come sulle altre tre pagine
+       (Danza "Contemporaneo · Experimental", Coreografia "Cast
+       multidisciplinari", Recitazione "Cinema · Teatro"). I tre campi di
+       lavoro del dossier, condensati. Da far passare dal controllo lingua. -->
+  <p class="mono identity-genre solo-largo" data-i18n="it">Cinema e serie TV &middot; Moda<span class="genre-cut"></span>Videoclip &middot; Pubblicit&agrave;</p>
+  <p class="mono identity-genre solo-telefono" data-i18n="it">Moda &middot; Videoclip &middot; Pubblicit&agrave; &middot; Cinema &middot; Serie TV</p>
+  <p class="mono identity-genre solo-largo" data-i18n="en">Film and TV &middot; Fashion<span class="genre-cut"></span>Music videos &middot; Commercials</p>
+  <p class="mono identity-genre solo-telefono" data-i18n="en">Fashion &middot; Music videos &middot; Commercials &middot; Film &middot; TV series</p>
+  <p class="mono identity-genre solo-largo" data-i18n="fr">Cin&eacute;ma et s&eacute;ries &middot; Mode<span class="genre-cut"></span>Clips &middot; Publicit&eacute;</p>
+  <p class="mono identity-genre solo-telefono" data-i18n="fr">Mode &middot; Clips &middot; Publicit&eacute; &middot; Cin&eacute;ma &middot; S&eacute;ries</p>
+  <!-- 8/9: tolto "Disponibile ovunque", formula unica del 17/8 (solo il paese)
+       gia' applicata alle altre pagine e al dossier di Direzione. -->
+  <p class="mono" data-i18n="it">Francia</p>
+  <p class="mono" data-i18n="en">France</p>
+  <p class="mono" data-i18n="fr">France</p>
+</div>
+
+<!-- 16/8: dei tre paragrafi del Metodo resta solo la frase d'apertura (deciso
+     da Gladia), il resto sta nel dossier. 8/9/2026, conforme a Danza,
+     Coreografia e Recitazione: la frase sale qui sotto la riga di identita',
+     prima della freccia. Era dopo il mosaico. Testo invariato. -->
+  <p class="works-line is-hero solo-largo-stretto" data-i18n="it">Il mio lavoro comincia sempre da una relazione di fiducia.</p>
+  <p class="works-line is-hero solo-stretto" data-i18n="it">Il mio lavoro comincia sempre da una relazione di fiducia.</p>
+  <p class="works-line is-hero solo-largo-stretto" data-i18n="en">Trust is where my work always starts.</p>
+  <p class="works-line is-hero solo-stretto" data-i18n="en">Trust is where my work always starts.</p>
+  <p class="works-line is-hero solo-largo-stretto" data-i18n="fr">Mon travail part toujours d&rsquo;une relation de confiance.</p>
+  <p class="works-line is-hero solo-stretto" data-i18n="fr">Mon travail part toujours d&rsquo;une relation de confiance.</p>
+
+<div class="line-connector">
+  <a class="line-connector-link" href="#direzione-lavori" aria-label="Vai ai lavori" data-i18n-aria-it="Vai ai lavori" data-i18n-aria-en="Scroll to the work" data-i18n-aria-fr="Aller aux projets">
+    <span class="connector-line"></span>
+    <span class="connector-arrow">&#8595;</span>
+  </a>
+</div>
+
+<section class="page is-standalone" id="direzione" aria-label="Direzione del movimento" data-i18n-aria-it="Direzione del movimento" data-i18n-aria-en="Movement direction" data-i18n-aria-fr="Direction du mouvement">
+
+  <div class="works-mosaic" id="direzione-lavori">
+    <!-- L'unico lavoro pagato in questo ruolo. Collage compatto sul modello di
+         recitazione (Gladia, 16/8): il clip INTERO (2'43", 16/8 mattina: prima
+         era un estratto di 51 s con link alla lightbox, lei ha chiesto tutto il
+         video come sulle altre pagine) parte da solo, muto e in loop, quando
+         entra nello schermo, con cursore, pulsante audio e schermo intero come
+         sulle sottopagine di danza; sotto tre fotogrammi in fila (dall'8/9) e i crediti sempre
+         leggibili. Nel clip Gladia non compare: la donna e' Sarah Okendo
+         (titoli di coda letti fotogramma per fotogramma). -->
+    <div class="dm-collage" style="--w:100%;">
+      <div class="reel reel-cinema dm-reel" id="lucien-riquadro" aria-label="Lucien Lumière, NORMAL, il clip" data-i18n-aria-it="Lucien Lumière, NORMAL, il clip" data-i18n-aria-en="Lucien Lumière, NORMAL, the video" data-i18n-aria-fr="Lucien Lumière, NORMAL, le clip">
+        <video class="reel-video" id="lucien-video" playsinline muted loop preload="none" data-avvia-in-vista poster="media/direzione-del-movimento/lucien-duo-poltrone.jpg">
+          <source src="media/direzione-del-movimento/lucien-normal-integrale-web.mp4" type="video/mp4">
+        </video>
+      <button class="sound-toggle" type="button" id="lucien-sound-toggle" aria-label="Attiva audio"
+              data-i18n-aria-it="Attiva audio" data-i18n-aria-en="Turn on sound" data-i18n-aria-fr="Activer le son"
+              data-aria-off-it="Attiva audio" data-aria-off-en="Turn on sound" data-aria-off-fr="Activer le son"
+              data-aria-on-it="Disattiva audio" data-aria-on-en="Turn off sound" data-aria-on-fr="Couper le son">
+        <span class="sound-toggle-label mono" aria-hidden="true"
+              data-i18n-text-it="Con l’audio è meglio"
+              data-i18n-text-en="Best with sound"
+              data-i18n-text-fr="Le son, c’est mieux">Con l’audio è meglio</span>
+        <span class="sound-toggle-circle">
+          <svg class="sound-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M4 9v6h4l5 5V4L8 9H4z"/>
+            <path class="sound-wave" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M16.5 8.5a5 5 0 0 1 0 7"/>
+            <path class="sound-wave" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M19 6a8.5 8.5 0 0 1 0 12"/>
+            <path class="sound-mute-line" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M15.5 6.5l5 11"/>
+          </svg>
+        </span>
+      </button>
+        <button class="sub-full" type="button" aria-label="Schermo intero" data-i18n-aria-it="Schermo intero" data-i18n-aria-en="Full screen" data-i18n-aria-fr="Plein &eacute;cran"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+      </div>
+    <article class="work-tile is-still dm-still-wide" style="--w:100%;"
+      aria-label="Tous les deux, de face, dans les fauteuils" data-i18n-aria-it="I due, di fronte, sulle poltrone" data-i18n-aria-en="The two of them, face on, in the seats" data-i18n-aria-fr="Tous les deux, de face, dans les fauteuils">
+      <div class="tile-media" data-sfondo="media/direzione-del-movimento/lucien-duo-frontale.jpg" role="img" aria-label="Tous les deux, de face, dans les fauteuils" data-i18n-aria-it="I due, di fronte, sulle poltrone" data-i18n-aria-en="The two of them, face on, in the seats" data-i18n-aria-fr="Tous les deux, de face, dans les fauteuils"></div>
+      <figcaption class="tile-cap"><span class="tile-title">LUCIEN LUMI&Egrave;RE</span><span class="tile-client mono">NORMAL</span><span class="tile-detail mono" data-i18n-text-it="I due, di fronte, sulle poltrone" data-i18n-text-en="The two of them, face on, in the seats" data-i18n-text-fr="Tous les deux, de face, dans les fauteuils">Tous les deux, de face, dans les fauteuils</span></figcaption>
+    </article>
+    <!-- 8/9: terzo fotogramma per la fila da tre (bozza L3). Scelto da me come
+         segnaposto fra le sei foto del clip mai usate: Gladia puo' cambiarlo. -->
+    <article class="work-tile is-still dm-still-terzo" style="--w:100%;"
+      aria-label="Tous les deux, de profil, dans les fauteuils rouges" data-i18n-aria-it="I due, di profilo, sulle poltrone rosse" data-i18n-aria-en="The two of them, in profile, in the red seats" data-i18n-aria-fr="Tous les deux, de profil, dans les fauteuils rouges">
+      <div class="tile-media" data-sfondo="media/direzione-del-movimento/lucien-frontale-profilo.jpg" role="img" aria-label="Tous les deux, de profil, dans les fauteuils rouges" data-i18n-aria-it="I due, di profilo, sulle poltrone rosse" data-i18n-aria-en="The two of them, in profile, in the red seats" data-i18n-aria-fr="Tous les deux, de profil, dans les fauteuils rouges"></div>
+      <figcaption class="tile-cap"><span class="tile-title">LUCIEN LUMI&Egrave;RE</span><span class="tile-client mono">NORMAL</span><span class="tile-detail mono" data-i18n-text-it="I due, di profilo, sulle poltrone rosse" data-i18n-text-en="The two of them, in profile, in the red seats" data-i18n-text-fr="Tous les deux, de profil, dans les fauteuils rouges">Tous les deux, de profil, dans les fauteuils rouges</span></figcaption>
+    </article>
+    <article class="work-tile is-still dm-still-tall" style="--w:100%;"
+      aria-label="Sarah Okendo en gros plan, sous son bonnet de perles" data-i18n-aria-it="Sarah Okendo, primo piano con la cuffia di perle" data-i18n-aria-en="Close-up of Sarah Okendo in her pearl cap" data-i18n-aria-fr="Sarah Okendo en gros plan, sous son bonnet de perles">
+      <div class="tile-media" data-sfondo="media/direzione-del-movimento/lucien-ritratto-pieno.jpg" role="img" aria-label="Sarah Okendo en gros plan, sous son bonnet de perles" data-i18n-aria-it="Sarah Okendo, primo piano con la cuffia di perle" data-i18n-aria-en="Close-up of Sarah Okendo in her pearl cap" data-i18n-aria-fr="Sarah Okendo en gros plan, sous son bonnet de perles" style="background-position:48% center;"></div>
+      <figcaption class="tile-cap"><span class="tile-title">LUCIEN LUMI&Egrave;RE</span><span class="tile-client mono">NORMAL</span><span class="tile-detail mono" data-i18n-text-it="Sarah Okendo, primo piano con la cuffia di perle" data-i18n-text-en="Close-up of Sarah Okendo in her pearl cap" data-i18n-text-fr="Sarah Okendo en gros plan, sous son bonnet de perles">Sarah Okendo en gros plan, sous son bonnet de perles</span></figcaption>
+    </article>
+      <div class="fc-credits dm-credits">
+        <p class="fc-role mono" data-i18n="it">Direzione del movimento &middot; Videoclip</p>
+        <p class="fc-role mono" data-i18n="en">Movement direction &middot; Music video</p>
+        <p class="fc-role mono" data-i18n="fr">Direction du mouvement &middot; Clip</p>
+        <p class="fc-title">NORMAL</p>
+        <p class="fc-client mono" data-i18n="it">Videoclip ufficiale di Lucien Lumi&egrave;re &middot; Produzione Maison Lumi&egrave;re</p>
+        <p class="fc-client mono" data-i18n="en">Official video for Lucien Lumi&egrave;re &middot; Produced by Maison Lumi&egrave;re</p>
+        <p class="fc-client mono" data-i18n="fr">Clip officiel de Lucien Lumi&egrave;re &middot; Production Maison Lumi&egrave;re</p>
+        <p class="fc-detail mono" data-i18n="it">Regia Eli Chicheportiche &middot; Direzione artistica Roman Veiga &middot; Con Lucien Lumi&egrave;re e Sarah Okendo</p>
+        <p class="fc-detail mono" data-i18n="en">Directed by Eli Chicheportiche &middot; Art direction Roman Veiga &middot; With Lucien Lumi&egrave;re and Sarah Okendo</p>
+        <p class="fc-detail mono" data-i18n="fr">R&eacute;alisation Eli Chicheportiche &middot; Direction artistique Roman Veiga &middot; Avec Lucien Lumi&egrave;re et Sarah Okendo</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="names-band">
+  <p class="band-kicker mono" data-i18n="it">Formazione con</p>
+  <p class="band-kicker mono" data-i18n="en">Trained with</p>
+  <p class="band-kicker mono" data-i18n="fr">Form&eacute;e aupr&egrave;s</p>
+  <ul class="names-list is-second mono">
+    <li><b><span data-i18n="fr">d&rsquo;</span>Alexandra Reynolds <span data-i18n="it">e</span><span data-i18n="en">and</span><span data-i18n="fr">et de</span> Tom Afiyan</b><span data-i18n="it">Movement for Film &middot; Londra</span><span data-i18n="en">Movement for Film &middot; London</span><span data-i18n="fr">Movement for Film &middot; Londres</span></li>
+  </ul>
+
+  <div class="names-rule" aria-hidden="true"></div>
+
+  <p class="band-kicker mono" data-i18n="it">Lavoro con</p>
+  <p class="band-kicker mono" data-i18n="en">Works with</p>
+  <p class="band-kicker mono" data-i18n="fr">Travaille avec</p>
+  <ul class="names-list is-cast mono">
+    <li data-i18n="it">Attori</li> <li data-i18n="it">Modelle&nbsp;e&nbsp;modelli</li> <li data-i18n="it">Performer</li> <li data-i18n="it">Cantanti</li>
+    <li data-i18n="en">Actors</li> <li data-i18n="en">Models</li> <li data-i18n="en">Performers</li> <li data-i18n="en">Singers</li>
+    <li data-i18n="fr">Com&eacute;diens</li> <li data-i18n="fr">Mannequins</li> <li data-i18n="fr">Performeurs</li> <li data-i18n="fr">Chanteurs</li>
+  </ul>
+
+  <div class="names-rule" aria-hidden="true"></div>
+
+  <p class="band-kicker mono" data-i18n="it">Radici</p>
+  <p class="band-kicker mono" data-i18n="en">Roots</p>
+  <p class="band-kicker mono" data-i18n="fr">Racines</p>
+  <ul class="names-list is-roots mono">
+    <!-- 8/9/2026, ordine scelto da Gladia e DIVERSO PER LINGUA, voluto: in
+         italiano Danza sta in mezzo (Coreografia, Danza, Recitazione), in
+         inglese e in francese ci sta Choreography / Chorégraphie. Per questo
+         le voci sono nove, tre per lingua, come la lista degli interpreti di
+         coreografia.html: l'ordine e' nell'HTML, non si puo' cambiare con un
+         attributo. Se si tocca una voce, va toccata in tutte e tre le lingue. -->
+    <li data-i18n="it"><a href="/coreografia" data-gm-pagina="coreografia">Coreografia</a><span class="root-cred">&Eacute;teignons les &eacute;crans &middot; Cannes</span></li>
+    <li data-i18n="it"><a href="/danza" data-gm-pagina="danza">Danza</a><span class="root-cred">Giochi Paralimpici, Parigi 2024<br>Herm&egrave;s, Valentino, Victoria&rsquo;s Secret</span></li>
+    <li data-i18n="it"><a href="/recitazione" data-gm-pagina="recitazione">Recitazione</a><span class="root-cred">Cinema &middot; Xavier Giannoli &middot; Gaumont<br>Teatro &middot; Carmen &middot; 75&nbsp;repliche</span></li>
+    <li data-i18n="en"><a href="/coreografia" data-gm-pagina="coreografia">Choreography</a><span class="root-cred">&Eacute;teignons les &eacute;crans &middot; Cannes</span></li>
+    <li data-i18n="en"><a href="/danza" data-gm-pagina="danza">Dance</a><span class="root-cred">Paralympic Games, Paris 2024<br>Herm&egrave;s, Valentino, Victoria&rsquo;s Secret</span></li>
+    <li data-i18n="en"><a href="/recitazione" data-gm-pagina="recitazione">Acting</a><span class="root-cred">Film &middot; Xavier Giannoli &middot; Gaumont<br>Stage &middot; Carmen, 75&nbsp;performances</span></li>
+    <li data-i18n="fr"><a href="/coreografia" data-gm-pagina="coreografia">Chor&eacute;graphie</a><span class="root-cred">&Eacute;teignons les &eacute;crans &middot; Cannes</span></li>
+    <li data-i18n="fr"><a href="/danza" data-gm-pagina="danza">Danse</a><span class="root-cred">Jeux Paralympiques, Paris 2024<br>Herm&egrave;s, Valentino, Victoria&rsquo;s Secret</span></li>
+    <li data-i18n="fr"><a href="/recitazione" data-gm-pagina="recitazione">Com&eacute;die</a><span class="root-cred">Cin&eacute;ma &middot; Xavier Giannoli &middot; Gaumont<br>Th&eacute;&acirc;tre &middot; Carmen, 75&nbsp;repr&eacute;sentations</span></li>
+  </ul>
+
+  <div class="names-rule" aria-hidden="true"></div>
+
+  <p class="band-kicker mono" data-i18n="it">Lingue di lavoro</p>
+  <p class="band-kicker mono" data-i18n="en">Working languages</p>
+  <p class="band-kicker mono" data-i18n="fr">Langues de travail</p>
+  <ul class="names-list mono">
+    <!-- 9/9/2026: le tre lingue si traducono, come nel dossier (IT «Italiano ·
+         Francese · Inglese», EN «Italian · French · English», FR «Italien ·
+         Français · Anglais»). Prima erano scritte in duro ciascuna nella propria
+         lingua e restavano identiche in tutte e tre le versioni del sito: la
+         produttrice francese del passo 4 le ha lette per mezzo secondo come un
+         secondo selettore di lingua. Nove voci, tre per lingua, come Radici. -->
+    <li data-i18n="it">Italiano</li><li data-i18n="it">Francese</li><li data-i18n="it">Inglese</li>
+    <li data-i18n="en">Italian</li><li data-i18n="en">French</li><li data-i18n="en">English</li>
+    <li data-i18n="fr">Italien</li><li data-i18n="fr">Fran&ccedil;ais</li><li data-i18n="fr">Anglais</li>
+  </ul>
+
+  <div class="page-actions works-actions is-end">
+    <!-- 8/9/2026, conforme a Danza, Coreografia e Recitazione: il pulsante del
+         dossier chiude le fasce, "una volta che hai finito, se vuoi piu'
+         informazioni". Era dentro la sezione, subito sotto la frase di voce.
+         Link vero da oggi: il dossier esiste in tre lingue, ogni pulsante apre
+         la sua. Stessa meccanica di Coreografia e dei CV: la pagina verde si
+         apre a schermo, da li' si preme Stampa e si scarica il PDF chiaro
+         (-impression). Per questo il "(PDF)" e' caduto dall'etichetta. -->
+    <a class="btn-square" href="/dossier-direzione-del-movimento" target="_blank" rel="noopener" data-i18n="it">Sfoglia il dossier completo</a>
+    <a class="btn-square" href="/movement-direction-dossier" target="_blank" rel="noopener" data-i18n="en">See the full portfolio</a>
+    <a class="btn-square" href="/dossier-direction-du-mouvement" target="_blank" rel="noopener" data-i18n="fr">Parcourir le dossier complet</a>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" type="button" aria-label="Chiudi" data-i18n-aria-it="Chiudi" data-i18n-aria-en="Close" data-i18n-aria-fr="Fermer">&times;</button>
+  <button class="lightbox-nav is-prev" type="button" aria-label="Foto precedente" data-i18n-aria-it="Foto precedente" data-i18n-aria-en="Previous photo" data-i18n-aria-fr="Photo pr&eacute;c&eacute;dente" hidden>&#8249;</button>
+  <button class="lightbox-nav is-next" type="button" aria-label="Foto successiva" data-i18n-aria-it="Foto successiva" data-i18n-aria-en="Next photo" data-i18n-aria-fr="Photo suivante" hidden>&#8250;</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lightbox-img" alt="" hidden>
+    <div class="lightbox-media" id="lightbox-media" hidden></div>
+    <div class="lightbox-cap" id="lightbox-cap" hidden></div>
+    <div class="lightbox-thumbs" id="lightbox-thumbs" hidden></div>
+  </div>
+</div>
+
+
+
+</div>
+
+<footer>
+  <div class="rule"></div>
+</footer>
+
+<div class="page-header is-closing">
+  <a class="wordmark page-logo" href="/it" data-gm-pagina="home" aria-label="Torna al portfolio" data-i18n-aria-it="Torna al portfolio" data-i18n-aria-en="Back to portfolio" data-i18n-aria-fr="Retour au portfolio">
+    <span class="logo-light" role="img" aria-label="Gladia Marchetti" style="--logo-mask: url(&quot;media/logo/logo-light.png&quot;);"></span>
+    <span class="logo-dark" role="img" aria-label="Gladia Marchetti" style="--logo-mask: url(&quot;media/logo/logo-dark.png&quot;);"></span>
+  </a>
+</div>
+
+
+<script>
+  var langLabelsIt = { it: 'italiano', fr: 'francese', en: 'inglese' };
+  var langLabelsEn = { it: 'italian', fr: 'french', en: 'english' };
+  var langLabelsFr = { it: 'italien', fr: 'français', en: 'anglais' };
+  var activeVideoLang = 'en';
+  /* Vero quando il video e' stato scelto nell'indirizzo (?reel=): da quel momento la lingua
+     della pagina non lo tocca piu'. Aggiunto l'11/9/2026, Recitazione ce l'aveva gia'. */
+  var reelSceltoDaIndirizzo = false;
+  var clicAutomatico = false;
+  function currentUiLang() {
+    var lang = document.documentElement.getAttribute('data-ui-lang');
+    return lang === 'en' || lang === 'fr' ? lang : 'it';
+  }
+  function updateVideoLangLabel(e) {
+    var lang = e && e.detail && e.detail.lang;
+    /* In apertura il video dell'indirizzo vince; dopo un clic vero della persona sulla
+       lingua, il video la segue e ?reel= sparisce dall'indirizzo (regola di Gladia, 11/9). */
+    if (reelSceltoDaIndirizzo && !linguaSceltaDallaPersona) return;
+    if (!lang || !langSources[lang] || lang === activeVideoLang) return;
+    if (linguaSceltaDallaPersona) { reelSceltoDaIndirizzo = false; scriviReelNellIndirizzo(null); }
+    var tab = document.querySelector('.lang-tab[data-lang="' + lang + '"]');
+    /* Clic automatico: allinea il video alla lingua, ma non conta come una scelta della
+       persona e non scrive ?reel= nell'indirizzo (senza ?reel= l'indirizzo dice gia'
+       «il video segue la lingua»). Solo un dito vero sulla linguetta blocca la scelta. */
+    if (tab) { clicAutomatico = true; tab.click(); clicAutomatico = false; }
+  }
+  document.addEventListener('gm-lang-change', updateVideoLangLabel);
+  var langSources = {
+    it: { src: 'media/direzione-del-movimento/md-it-cinema.mp4', poster: 'media/direzione-del-movimento/md-it-cinema-poster.jpg' },
+    fr: { src: 'media/direzione-del-movimento/md-fr-cinema.mp4', poster: 'media/direzione-del-movimento/md-fr-cinema-poster.jpg' },
+    en: { src: 'media/direzione-del-movimento/md-en-cinema.mp4', poster: 'media/direzione-del-movimento/md-en-cinema-poster.jpg' }
+  };
+
+  var reel = document.getElementById('direzione-reel');
+  var video = document.getElementById('direzione-video');
+  var videoSource = document.getElementById('direzione-video-source');
+  var soundToggle = document.getElementById('direzione-sound-toggle');
+
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var requestedReel = params.get('reel');
+    var requestedLang = params.get('lang');
+
+    if (requestedReel && langSources[requestedReel]) {
+      document.querySelectorAll('.lang-tab').forEach(function (t) { t.classList.remove('is-active'); });
+      var matchingTab = document.querySelector('.lang-tab[data-lang="' + requestedReel + '"]');
+      if (matchingTab) matchingTab.classList.add('is-active');
+      activeVideoLang = requestedReel;
+      reelSceltoDaIndirizzo = true;
+      updateVideoLangLabel();
+      video.poster = langSources[requestedReel].poster;
+      videoSource.src = langSources[requestedReel].src;
+      video.load();
+    }
+
+    var pageLang = null;
+    /* ?reel= decide SOLO il video. La lingua della pagina la decide il nome del file
+       (-it, -fr, oppure nessun suffisso per l'inglese) o un ?lang= esplicito. Fino
+       all'11/9/2026 un ?reel=fr cambiava anche la lingua della pagina: era la regola di
+       quando la lingua non stava ancora nell'indirizzo, e faceva aprire in francese una
+       pagina mandata in inglese col video francese. */
+    if (requestedLang && ['it', 'en', 'fr'].indexOf(requestedLang) !== -1) {
+      pageLang = requestedLang;
+    }
+    if (pageLang) {
+      try { localStorage.setItem('gm-portfolio-lang', pageLang); } catch (e) {}
+    }
+  })();
+
+  /* La partenza immediata vale solo per chi non ha chiesto di ridurre il
+     movimento: con preload="none" una play() qui forzerebbe lo scaricamento
+     del video proprio a chi non lo vedra' mai muoversi (danza, 13/8). */
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    video.play().catch(function () {});
+  }
+
+  /* Pulsante audio dell'hero, rifatto il 13/8/2026. Blocco identico su danza,
+     recitazione e direzione del movimento: tutte e tre avevano lo stesso bug,
+     copiato da una pagina all'altra. Se lo tocchi qui, toccalo anche la'.
+     I tre difetti, verificati premendolo nel browser su danza:
+       1. scriveva l'etichetta in italiano anche col sito in inglese o in
+          francese, perche' la stringa 'Disattiva audio' stava a mano nel codice;
+       2. non spegneva niente: ogni clic riaccendeva, quindi il pulsante
+          annunciava 'disattiva' e non disattivava;
+       3. riportava il video a zero a ogni clic, anche solo per togliere l'audio.
+     Il ritorno a zero resta, ma solo quando si ACCENDE, cosi' la musica parte
+     dall'inizio. Spegnendo, il video resta dov'e'. */
+  (function () {
+    var LINGUE = ['it', 'en', 'fr'];
+
+    function lingua() {
+      var b = document.querySelector('.ui-lang-btn.is-active');
+      var l = b ? b.getAttribute('data-ui-lang') : 'it';
+      return LINGUE.indexOf(l) >= 0 ? l : 'it';
+    }
+
+    /* Riallinea sia aria-label sia i data-i18n-aria-*, altrimenti al primo
+       cambio di lingua il traduttore rimette l'etichetta del verso sbagliato. */
+    function etichetta() {
+      var verso = video.muted ? 'off' : 'on';
+      LINGUE.forEach(function (l) {
+        var v = soundToggle.getAttribute('data-aria-' + verso + '-' + l);
+        if (v) soundToggle.setAttribute('data-i18n-aria-' + l, v);
+      });
+      var cur = soundToggle.getAttribute('data-aria-' + verso + '-' + lingua());
+      if (cur) soundToggle.setAttribute('aria-label', cur);
+    }
+
+    /* Un solo audio alla volta in tutta la pagina. */
+    function zittisciGliAltri() {
+      document.querySelectorAll('video').forEach(function (v) {
+        if (v === video || v.muted) return;
+        v.muted = true;
+        var h = v.parentNode;
+        if (h && h.classList) h.classList.remove('is-unmuted');
+        var b = h && h.querySelector ? h.querySelector('.sound-toggle') : null;
+        if (b) {
+          LINGUE.forEach(function (l) {
+            var t = b.getAttribute('data-aria-off-' + l) || b.getAttribute('data-i18n-aria-' + l);
+            if (t) b.setAttribute('data-i18n-aria-' + l, t);
+          });
+          var cur = b.getAttribute('data-i18n-aria-' + lingua());
+          if (cur) b.setAttribute('aria-label', cur);
+        }
+      });
+    }
+
+    soundToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      reel.classList.remove('is-invito');   /* premuto: l'invito rientra */
+      video.muted = !video.muted;
+      reel.classList.toggle('is-unmuted', !video.muted);
+      if (!video.muted) {
+        zittisciGliAltri();
+        video.currentTime = 0;
+        video.play().catch(function () {});
+      }
+      etichetta();
+    });
+
+    document.querySelectorAll('.ui-lang-btn').forEach(function (b) {
+      b.addEventListener('click', function () { setTimeout(etichetta, 0); });
+    });
+
+    /* La linguetta esce da sola un attimo dopo che il video e' partito, cosi'
+       non compare sopra un rettangolo ancora vuoto, e resta aperta finche' non
+       si preme. Non torna piu' dopo, nemmeno rispegnendo l'audio: a quel punto
+       l'invito e' stato accolto e ripeterlo sarebbe insistere. */
+    setTimeout(function () {
+      if (!video.muted) return;
+      reel.classList.add('is-invito');
+    }, 1500);
+
+    /* Il blocco comune rispegne l'audio a ogni giro del loop e toglie
+       is-unmuted dal riquadro: da li' riallineo anche l'etichetta. */
+    new MutationObserver(function () {
+      if (video.muted === reel.classList.contains('is-unmuted')) return;
+      etichetta();
+    }).observe(reel, { attributes: true, attributeFilter: ['class'] });
+
+    etichetta();
+  })();
+
+  video.addEventListener('click', function () {
+    if (video.paused) {
+      video.play().catch(function () {});
+    } else {
+      video.pause();
+    }
+  });
+
+  video.addEventListener('play', function () {
+    reel.classList.add('is-playing');
+  });
+
+  video.addEventListener('pause', function () {
+    reel.classList.remove('is-playing');
+  });
+
+  video.addEventListener('ended', function () {
+    reel.classList.remove('is-playing');
+    video.currentTime = 0;
+  });
+
+
+  /* Il video scelto va scritto nell'indirizzo, cosi' il pulsante Condividi del browser manda
+     esattamente quello che si sta guardando (chiesto da Gladia l'11/9/2026: sceglieva il
+     trilingue, condivideva, e a chi riceveva arrivava il video della lingua). Non ricarica
+     niente, cambia solo cio' che si legge nella barra. Aprendo il file col doppio clic non
+     si tocca. */
+  function scriviReelNellIndirizzo(quale) {
+    if (location.protocol === 'file:') return;
+    try {
+      var u = new URL(location.href);
+      if (quale) u.searchParams.set('reel', quale); else u.searchParams.delete('reel');
+      history.replaceState(null, '', u.pathname + u.search + u.hash);
+    } catch (e) {}
+  }
+  /* Un clic della persona sui pulsanti della lingua della pagina (non quelli automatici
+     dello script di apertura, che alza window.__gmClicAutomatico). */
+  var linguaSceltaDallaPersona = false;
+  document.querySelectorAll('.ui-lang-btn').forEach(function (b) {
+    b.addEventListener('click', function () { if (!window.__gmClicAutomatico) linguaSceltaDallaPersona = true; }, true);
+  });
+  document.querySelectorAll('.lang-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var group = tab.closest('.lang-select');
+      group.querySelectorAll('.lang-tab').forEach(function (t) { t.classList.remove('is-active'); });
+      tab.classList.add('is-active');
+      var lang = tab.getAttribute('data-lang');
+      activeVideoLang = lang;
+      /* Dall'11/9/2026 la scelta della persona e' definitiva e finisce nell'indirizzo:
+         un cambio di lingua successivo non riporta il video alla lingua della pagina, e
+         condividendo si manda proprio questo video. */
+      if (!clicAutomatico) { reelSceltoDaIndirizzo = true; scriviReelNellIndirizzo(lang); }
+      updateVideoLangLabel();
+
+      reel.classList.remove('is-unmuted', 'is-playing');
+      video.muted = true;
+      videoSource.src = langSources[lang].src;
+      video.poster = langSources[lang].poster;
+      video.load();
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        video.play().catch(function () {});
+      }
+    });
+  });
+</script>
+
+<script>
+(() => {
+  const STORAGE_KEY = 'gm-portfolio-lang';
+  const SUPPORTED = ['it', 'en', 'fr'];
+  const TITLES = { it: 'Gladia Marchetti · Direzione del movimento', en: 'Gladia Marchetti · Movement direction', fr: 'Gladia Marchetti · Direction du mouvement' };
+
+  function apply(lang) {
+    document.documentElement.setAttribute('data-ui-lang', lang);
+    document.documentElement.lang = lang;
+    if (TITLES[lang]) document.title = TITLES[lang];
+    document.querySelectorAll('.ui-lang-btn').forEach((btn) => {
+      btn.classList.toggle('is-active', btn.getAttribute('data-ui-lang') === lang);
+    });
+    document.querySelectorAll('[data-i18n-aria-it]').forEach((el) => {
+      const val = el.getAttribute('data-i18n-aria-' + lang) || el.getAttribute('data-i18n-aria-it');
+      if (val) el.setAttribute('aria-label', val);
+    });
+    document.querySelectorAll('[data-i18n-text-it]').forEach((el) => {
+      const val = el.getAttribute('data-i18n-text-' + lang) || el.getAttribute('data-i18n-text-it');
+      if (val) el.innerHTML = val;
+    });
+    document.dispatchEvent(new CustomEvent('gm-lang-change', { detail: { lang } }));
+  }
+
+  let stored = null;
+  try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  apply(SUPPORTED.includes(stored) ? stored : 'en');
+
+  document.querySelectorAll('.ui-lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-ui-lang');
+      if (!SUPPORTED.includes(lang)) return;
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+})();
+</script>
+
+<script>
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.pause();
+      v.addEventListener('loadeddata', function () { v.pause(); });
+    });
+  }
+</script>
+<script>
+/* Cursore dei video e stop quando escono dallo schermo.
+   Blocco identico su tutte le pagine del portfolio. */
+(function () {
+  var ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var ETICHETTE = {
+    it: 'Barra di avanzamento del video',
+    en: 'Video progress bar',
+    fr: 'Barre de progression de la vidéo'
+  };
+
+  function linguaAttiva() {
+    var b = document.querySelector('.ui-lang-btn.is-active');
+    var l = b ? b.getAttribute('data-ui-lang') : 'en';
+    return ETICHETTE[l] ? l : 'en';
+  }
+
+  function tempo(s, decimi) {
+    if (!isFinite(s) || s < 0) s = 0;
+    var m = Math.floor(s / 60);
+    var r = s - m * 60;
+    if (decimi) return m + ':' + (r < 10 ? '0' : '') + r.toFixed(1);
+    return m + ':' + ('0' + Math.floor(r)).slice(-2);
+  }
+
+  /* NOTA: #performance-video e' agganciato qui invece di avere un suo blocco a
+     parte, cosi' eredita gia' pronti il pulsante audio nei due sensi con le
+     etichette tradotte, lo spegnimento dell'audio a ogni giro del loop e lo
+     stop quando esce dallo schermo. Si porta dietro anche il cursore: se sul
+     riquadro del mosaico non lo vogliamo, basta toglierlo da questo selettore. */
+  document.querySelectorAll('video.reel-video, #proof-video, #performance-video').forEach(function (video) {
+    var host = video.parentNode;
+    host.classList.add('reel-scrub-host');
+
+    /* La barra di scorrimento e l'orologio restano solo sui video presentati
+       come video, cioe' l'hero in cima. I riquadri del mosaico sono immagini
+       che si muovono, dichiarate role="img": un contatore che scorre li fa
+       leggere come un lettore e abbassa di registro i crediti che stanno
+       sotto. Deciso il 13/8/2026.
+       La barra e l'orologio vengono comunque costruiti, solo non attaccati
+       alla pagina: cosi' tutto il codice che li aggiorna continua a girare
+       su nodi staccati senza dover essere riscritto, e per rimetterli basta
+       questa riga. */
+    var conCursore = !video.classList.contains('mosaic-clip');
+
+    var scrub = document.createElement('div');
+    scrub.className = 'reel-scrub';
+    scrub.setAttribute('role', 'slider');
+    scrub.setAttribute('tabindex', '0');
+    scrub.setAttribute('aria-valuemin', '0');
+    scrub.setAttribute('aria-valuemax', '100');
+    scrub.setAttribute('aria-valuenow', '0');
+    Object.keys(ETICHETTE).forEach(function (l) {
+      scrub.setAttribute('data-i18n-aria-' + l, ETICHETTE[l]);
+    });
+    scrub.setAttribute('aria-label', ETICHETTE[linguaAttiva()]);
+    scrub.innerHTML = '<div class="reel-scrub-line"><div class="reel-scrub-fill"></div><span class="reel-scrub-knob"></span></div>';
+
+    var clock = document.createElement('span');
+    clock.className = 'reel-clock mono';
+    clock.textContent = '0:00 / 0:00';
+
+    if (conCursore) {
+      host.appendChild(scrub);
+      host.appendChild(clock);
+    }
+
+    var fill = scrub.querySelector('.reel-scrub-fill');
+    var knob = scrub.querySelector('.reel-scrub-knob');
+
+    function aggiorna() {
+      var d = video.duration || 0;
+      var p = d > 0 ? (video.currentTime / d) * 100 : 0;
+      fill.style.width = p + '%';
+      knob.style.left = p + '%';
+      scrub.setAttribute('aria-valuenow', Math.round(p));
+      clock.textContent = tempo(video.currentTime, video.paused) + ' / ' + tempo(d, false);
+    }
+
+    function cerca(clientX) {
+      if (!video.duration) return;
+      var r = scrub.getBoundingClientRect();
+      var f = Math.min(1, Math.max(0, (clientX - r.left) / r.width));
+      video.currentTime = f * video.duration;
+      aggiorna();
+    }
+
+    scrub.addEventListener('pointerdown', function (e) {
+      scrub.classList.add('is-dragging');
+      try { scrub.setPointerCapture(e.pointerId); } catch (err) {}
+      cerca(e.clientX);
+      e.preventDefault();
+    });
+    scrub.addEventListener('pointermove', function (e) {
+      if (scrub.classList.contains('is-dragging')) cerca(e.clientX);
+    });
+    ['pointerup', 'pointercancel'].forEach(function (ev) {
+      scrub.addEventListener(ev, function () { scrub.classList.remove('is-dragging'); });
+    });
+
+    scrub.addEventListener('keydown', function (e) {
+      var passo = e.shiftKey ? 1 / 24 : 5;
+      var d = video.duration || 0;
+      if (e.key === 'ArrowRight') video.currentTime = Math.min(d, video.currentTime + passo);
+      else if (e.key === 'ArrowLeft') video.currentTime = Math.max(0, video.currentTime - passo);
+      else if (e.key === 'Home') video.currentTime = 0;
+      else if (e.key === 'End') video.currentTime = Math.max(0, d - 0.05);
+      else if (e.key === ' ' || e.key === 'Enter') {
+        if (video.paused) video.play().catch(function () {}); else video.pause();
+      } else return;
+      e.preventDefault();
+      aggiorna();
+    });
+
+    /* Se il video gira in loop e l'audio era acceso, al giro nuovo riparte muto.
+       NOTA: un video con data-audio-persistente e' escluso da questa regola e
+       tiene la musica accesa giro dopo giro, finche' non la si spegne a mano. */
+    var ultimoTempo = 0;
+    video.addEventListener('timeupdate', function () {
+      var d = video.duration || 0;
+      if (!video.muted && !video.hasAttribute('data-audio-persistente') &&
+          d > 2 && ultimoTempo > d - 1 && video.currentTime < 1) {
+        video.muted = true;
+        host.classList.remove('is-unmuted');
+        var bottone = host.querySelector('.sound-toggle');
+        if (bottone) {
+          Object.keys(ETICHETTE).forEach(function (l) {
+            var v = bottone.getAttribute('data-aria-off-' + l);
+            if (v) bottone.setAttribute('data-i18n-aria-' + l, v);
+          });
+          var cur = bottone.getAttribute('data-i18n-aria-' + linguaAttiva());
+          if (cur) bottone.setAttribute('aria-label', cur);
+        }
+      }
+      ultimoTempo = video.currentTime;
+    });
+
+    video.addEventListener('timeupdate', aggiorna);
+    video.addEventListener('loadedmetadata', aggiorna);
+    video.addEventListener('seeked', aggiorna);
+    video.addEventListener('play', function () { host.classList.remove('is-paused'); aggiorna(); });
+    video.addEventListener('pause', function () { host.classList.add('is-paused'); aggiorna(); });
+    if (video.paused) host.classList.add('is-paused');
+    aggiorna();
+  });
+
+  /* Stop quando il video esce dallo schermo, quando si cambia scheda
+     e quando si passa a un altro programma. Riprende solo quello che stava andando. */
+  var elenco = Array.prototype.slice.call(document.querySelectorAll('video'));
+  var stato = new WeakMap();
+
+  elenco.forEach(function (v) {
+    /* data-avvia-in-vista: i tre video del mosaico non hanno piu' autoplay ne'
+       preload, quindi all'apertura della pagina non scaricano un byte. Partono
+       da qui la prima volta che entrano nello schermo, che e' anche il momento
+       in cui qualcuno li puo' guardare.
+       Prima erano tutti e quattro in autoplay con preload="auto": la pagina
+       tirava giu' 25,9 MB prima che l'utente toccasse qualsiasi cosa, cioe' 41
+       secondi su una connessione mobile. Misurato il 13/8/2026 col browser,
+       leggendo video.buffered: erano al 100% quattro secondi dopo l'apertura.
+       ATTENZIONE: questa riga leggeva solo hasAttribute('autoplay'). Togliendo
+       autoplay senza toccarla, i video del mosaico non ripartivano piu' quando
+       rientravano in vista. */
+    stato.set(v, {
+      inVista: true,
+      andava: (v.hasAttribute('autoplay') || v.hasAttribute('data-avvia-in-vista')) && !ridotto,
+      autoStop: false
+    });
+    v.addEventListener('play', function () { stato.get(v).andava = true; });
+    v.addEventListener('pause', function () {
+      var s = stato.get(v);
+      if (s.autoStop) s.autoStop = false; else s.andava = false;
+    });
+  });
+
+  function ferma(v) {
+    var s = stato.get(v);
+    if (!s || v.paused) return;
+    s.autoStop = true;
+    v.pause();
+  }
+
+  function riprendi(v) {
+    var s = stato.get(v);
+    if (!s || ridotto || !s.inVista || !s.andava) return;
+    if (document.hidden || !document.hasFocus()) return;
+    v.play().catch(function () {});
+  }
+
+  if ('IntersectionObserver' in window) {
+    /* 16/8: due soglie. Il reel parte appena entra (15%). I clip del mosaico
+       (.mosaic-clip) partono solo quando il riquadro e' visibile quasi per
+       intero (85%) e si fermano appena torna a meta': Gladia non vuole
+       riquadri che si muovono tagliati dal bordo dello schermo. */
+    function osserva(soglia, filtro) {
+      var oss = new IntersectionObserver(function (voci) {
+        voci.forEach(function (voce) {
+          var s = stato.get(voce.target);
+          if (!s) return;
+          s.inVista = voce.isIntersecting && voce.intersectionRatio >= soglia;
+          if (s.inVista) riprendi(voce.target); else ferma(voce.target);
+        });
+      }, { threshold: [soglia] });
+      elenco.filter(filtro).forEach(function (v) { oss.observe(v); });
+    }
+    osserva(0.85, function (v) { return v.classList.contains('mosaic-clip'); });
+    osserva(0.15, function (v) { return !v.classList.contains('mosaic-clip'); });
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) elenco.forEach(ferma); else elenco.forEach(riprendi);
+  });
+  window.addEventListener('blur', function () { elenco.forEach(ferma); });
+  window.addEventListener('focus', function () { elenco.forEach(riprendi); });
+})();
+</script>
+
+<script>
+/* Le immagini sotto la piega non si scaricano piu' all'apertura.
+   Misurato il 14/8/2026 servendo la pagina via http: erano 1,14 MB su 7,32 di
+   arrivo, cioe' le cinque foto del mosaico (910 KB, sfondi CSS) e i tre poster
+   dei video (229 KB). Nessuno le vede finche' non scorre.
+   Perche' un osservatore separato da quello dei video, che sta piu' sotto:
+   quello ha soglia 0.15 e serve a far partire e fermare la riproduzione, qui
+   invece serve caricare PRIMA che il riquadro si veda, altrimenti l'immagine
+   compare a scatto sotto gli occhi. Da qui il margine di 400px e la soglia 0.
+   Toccare uno dei due non deve cambiare l'altro.
+   Il poster dell'hero NON passa di qui: e' l'unica immagine sopra la piega e
+   deve esserci subito. */
+(function () {
+  var pigri = [].slice.call(document.querySelectorAll('[data-sfondo], [data-poster]'));
+  if (!pigri.length) return;
+
+  function carica(el) {
+    if (el.dataset.sfondo) {
+      el.style.backgroundImage = "url('" + el.dataset.sfondo + "')";
+      delete el.dataset.sfondo;
+    }
+    if (el.dataset.poster) {
+      el.poster = el.dataset.poster;
+      delete el.dataset.poster;
+    }
+  }
+
+  /* Senza IntersectionObserver si carica tutto subito: meglio una pagina
+     pesante di una pagina con i buchi al posto delle foto. */
+  if (!('IntersectionObserver' in window)) {
+    pigri.forEach(carica);
+    return;
+  }
+
+  var osservatorePigri = new IntersectionObserver(function (voci) {
+    voci.forEach(function (voce) {
+      if (!voce.isIntersecting) return;
+      carica(voce.target);
+      osservatorePigri.unobserve(voce.target);
+    });
+  }, { rootMargin: '400px 0px', threshold: 0 });
+
+  pigri.forEach(function (el) { osservatorePigri.observe(el); });
+})();
+</script>
+
+<script>
+/* Apre sopra la pagina: una foto del book, oppure il video intero di un
+   lavoro con i suoi crediti. Il video YouTube nasce solo qui, al clic, su
+   youtube-nocookie: chi non apre niente non scarica niente. */
+(function () {
+  var box = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
+  var media = document.getElementById('lightbox-media');
+  var cap = document.getElementById('lightbox-cap');
+  if (!box) return;
+
+  function svuota() {
+    var pn = box.querySelectorAll('.lightbox-nav'); [].forEach.call(pn, function (b) { b.hidden = true; });
+    img.hidden = true; img.src = '';
+    media.hidden = true; media.innerHTML = '';
+    cap.hidden = true; cap.innerHTML = '';
+    var th = document.getElementById('lightbox-thumbs'); if (th) { th.hidden = true; th.innerHTML = ''; }
+    media.classList.remove('is-photo');
+  }
+  function apri() {
+    box.hidden = false; document.body.style.overflow = 'hidden';
+    /* Zittisce i video DELLA PAGINA, non quello appena aperto: prima il
+       selettore prendeva anche il video dentro la lightbox e l'audio non
+       partiva mai. Il video della lightbox e' l'unico fuori da .tile-media
+       e dal reel, quindi si esclude per posizione, non per nome. */
+    document.querySelectorAll('.tile-media video, .reel-video').forEach(function (v) { v.muted = true; });
+    box.querySelector('.lightbox-close').focus();
+  }
+  function chiudi() { svuota(); box.hidden = true; document.body.style.overflow = ''; }
+  function segna(b) { [].forEach.call(b.parentNode.children, function (c) { c.classList.remove('is-current'); }); b.classList.add('is-current'); }
+
+  /* Galleria del book: le foto UNICHE sono la prima meta' della lista (la
+     seconda meta' e' la copia per il loop). Si naviga con le frecce a schermo
+     e con quelle della tastiera. */
+  var tutti = [].slice.call(document.querySelectorAll('.book-item'));
+  var uniche = tutti.filter(function (b) { return b.getAttribute('aria-hidden') !== 'true'; });
+  var prev = box.querySelector('.lightbox-nav.is-prev'), next = box.querySelector('.lightbox-nav.is-next');
+  var indice = -1;
+  function mostraFotoBook(i) {
+    indice = (i + uniche.length) % uniche.length;
+    var b = uniche[indice];
+    img.src = b.getAttribute('data-piena');
+    img.alt = b.getAttribute('aria-label') || '';
+    img.hidden = false;
+    prev.hidden = false; next.hidden = false;
+  }
+  tutti.forEach(function (b, k) {
+    b.addEventListener('click', function () {
+      svuota();
+      mostraFotoBook(k % uniche.length);
+      apri();
+    });
+  });
+  prev.addEventListener('click', function (e) { e.stopPropagation(); mostraFotoBook(indice - 1); });
+  next.addEventListener('click', function (e) { e.stopPropagation(); mostraFotoBook(indice + 1); });
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden || prev.hidden) return;
+    if (e.key === 'ArrowLeft') mostraFotoBook(indice - 1);
+    else if (e.key === 'ArrowRight') mostraFotoBook(indice + 1);
+  });
+
+  var thumbs = document.getElementById('lightbox-thumbs');
+  document.querySelectorAll('.work-tile.is-apribile').forEach(function (t) {
+    function mostraVideo() {
+      media.innerHTML = ''; media.classList.remove('is-photo');
+      var yt = t.getAttribute('data-yt'), src = t.getAttribute('data-src');
+      if (yt) {
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + yt + '?autoplay=1&rel=0&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
+        f.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+        f.setAttribute('allowfullscreen', '');
+        f.setAttribute('title', t.querySelector('.tile-title').textContent);
+        media.appendChild(f);
+      } else if (src) {
+        var v = document.createElement('video');
+        v.src = src; v.controls = true; v.autoplay = true; v.playsInline = true;
+        v.muted = false; v.volume = 1;
+        media.appendChild(v);
+      }
+      media.hidden = false;
+    }
+    function mostraFoto(src) {
+      media.innerHTML = ''; media.classList.add('is-photo');
+      var i = document.createElement('img'); i.src = src; i.alt = t.querySelector('.tile-title').textContent;
+      media.appendChild(i); media.hidden = false;
+    }
+    function entra() {
+      /* Il progetto di punta ha una sottopagina sua (15/8, stesso modello di
+         INequality su coreografia): il clic porta li', niente lightbox. */
+      var href = t.getAttribute('data-href');
+      if (href) { location.href = href; return; }
+      svuota();
+      var senzaVideo = !t.getAttribute('data-yt') && !t.getAttribute('data-src');
+      if (!senzaVideo) mostraVideo();
+      thumbs.innerHTML = ''; thumbs.hidden = true;
+      var fotos = (t.getAttribute('data-lb-fotos') || '').split('|').filter(function (x) { return x; });
+      if (senzaVideo && fotos.length) { mostraFoto(fotos[0]); }
+      if (fotos.length && !senzaVideo) {
+        var poster = t.querySelector('[data-poster]') ? t.querySelector('[data-poster]').getAttribute('data-poster') : (t.querySelector('video') && t.querySelector('video').poster) || '';
+        var bV = document.createElement('button'); bV.type = 'button'; bV.className = 'is-video is-current';
+        bV.setAttribute('aria-label', 'Video'); bV.textContent = '\u25B6';
+        if (poster) bV.style.backgroundImage = "url('" + poster + "')";
+        bV.addEventListener('click', function () { mostraVideo(); segna(bV); });
+        thumbs.appendChild(bV);
+        fotos.forEach(function (src, k) {
+          var b = document.createElement('button'); b.type = 'button';
+          b.style.backgroundImage = "url('" + src + "')"; b.setAttribute('aria-label', 'Foto ' + (k + 1));
+          b.addEventListener('click', function () { mostraFoto(src); segna(b); });
+          thumbs.appendChild(b);
+        });
+        thumbs.hidden = false;
+      }
+      var q = function (c) { var e = t.querySelector(c); return e ? e.innerHTML : ''; };
+      /* Se il riquadro ha un credito lungo per la lightbox (data-lb-detail-xx),
+         qui c'e' spazio e si usa quello; nel riquadro resta la riga corta. */
+      var lang = document.documentElement.getAttribute('data-ui-lang') || 'en';
+      var lungo = t.getAttribute('data-lb-detail-' + lang) || t.getAttribute('data-lb-detail-fr');
+      var dettaglio = lungo ? [q('.tile-client'), lungo].filter(function (x) { return x; }).join(' &middot; ')
+                            : [q('.tile-client'), q('.tile-detail')].filter(function (x) { return x; }).join(' &middot; ');
+      cap.innerHTML = (q('.tile-role') ? '<div class="lb-role">' + q('.tile-role') + '</div>' : '')
+                    + '<div class="lb-title">' + q('.tile-title') + '</div>'
+                    + (dettaglio ? '<div class="lb-detail">' + dettaglio + '</div>' : '');
+      cap.hidden = false;
+      apri();
+    }
+    t.addEventListener('click', entra);
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); entra(); }
+    });
+  });
+
+  box.querySelector('.lightbox-close').addEventListener('click', chiudi);
+  box.addEventListener('click', function (e) { if (e.target === box) chiudi(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !box.hidden) chiudi();
+  });
+})();
+</script>
+
+<script>
+/* Audio del clip nel collage (copiato dal teaser di recitazione). Adattato dal blocco "performance" della bozza
+   Danza: collega il pulsante nei due sensi, segue la lingua, un solo audio alla
+   volta in pagina. Qui, a differenza del teaser di recitazione, con l'audio il
+   clip NON riparte da capo (Gladia, 16/8: video lungo, non ha senso). */
+(function () {
+  var riquadro = document.getElementById('lucien-riquadro');
+  var video = document.getElementById('lucien-video');
+  var bottone = document.getElementById('lucien-sound-toggle');
+  if (!riquadro || !video || !bottone) return;
+  var LINGUE = ['it', 'en', 'fr'];
+  function lingua() {
+    var b = document.querySelector('.ui-lang-btn.is-active');
+    var l = b ? b.getAttribute('data-ui-lang') : 'en';
+    return LINGUE.indexOf(l) >= 0 ? l : 'en';
+  }
+  function etichetta() {
+    var verso = video.muted ? 'off' : 'on';
+    LINGUE.forEach(function (l) {
+      var v = bottone.getAttribute('data-aria-' + verso + '-' + l);
+      if (v) bottone.setAttribute('data-i18n-aria-' + l, v);
+    });
+    var cur = bottone.getAttribute('data-aria-' + verso + '-' + lingua());
+    if (cur) bottone.setAttribute('aria-label', cur);
+  }
+  function zittisciGliAltri() {
+    document.querySelectorAll('video').forEach(function (v) {
+      if (v === video || v.muted) return;
+      v.muted = true;
+      var h = v.parentNode;
+      if (h && h.classList) h.classList.remove('is-unmuted');
+      var b = h && h.querySelector ? h.querySelector('.sound-toggle') : null;
+      if (b) {
+        LINGUE.forEach(function (l) {
+          var t = b.getAttribute('data-aria-off-' + l) || b.getAttribute('data-i18n-aria-' + l);
+          if (t) b.setAttribute('data-i18n-aria-' + l, t);
+        });
+        var cur = b.getAttribute('data-i18n-aria-' + lingua());
+        if (cur) b.setAttribute('aria-label', cur);
+      }
+    });
+  }
+  bottone.addEventListener('click', function (e) {
+    e.stopPropagation();
+    video.muted = !video.muted;
+    riquadro.classList.toggle('is-unmuted', !video.muted);
+    if (!video.muted) {
+      zittisciGliAltri();
+      video.setAttribute('data-voluto', '1');
+      video.play().catch(function () {});
+    }
+    etichetta();
+  });
+  /* Schermo intero (16/8), pulsante in alto a destra del riquadro. */
+  var full = riquadro.querySelector('.sub-full');
+  if (full) {
+    full.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (document.fullscreenElement) { document.exitFullscreen(); return; }
+      if (riquadro.requestFullscreen) { riquadro.requestFullscreen().catch(function () {}); }
+      else if (video.webkitEnterFullscreen) { video.webkitEnterFullscreen(); }
+    });
+  }
+
+  video.addEventListener('click', function () {
+    if (video.paused) video.play().catch(function () {}); else video.pause();
+  });
+  document.querySelectorAll('.ui-lang-btn').forEach(function (b) {
+    b.addEventListener('click', function () { setTimeout(etichetta, 0); });
+  });
+  new MutationObserver(function () {
+    if (video.muted === riquadro.classList.contains('is-unmuted')) return;
+    etichetta();
+  }).observe(riquadro, { attributes: true, attributeFilter: ['class'] });
+  etichetta();
+})();
+</script>
+
+<script>
+/* G3: sul telefono la frase va sotto la freccia; oltre torna al suo posto (sull'iPad sta nel primo schermo). */
+(function () {
+  var STRETTO = window.matchMedia('(max-width: 44rem)');
+  var c = document.querySelector('.line-connector'); if (!c) return;
+  var frasi = Array.prototype.slice.call(document.querySelectorAll('.works-line.is-hero'));
+  var segnaposto = document.createComment('frase');
+  frasi[0].parentNode.insertBefore(segnaposto, frasi[0]);
+  function sistema() {
+    if (STRETTO.matches) { var dopo = c; frasi.forEach(function (f) { dopo.after(f); dopo = f; }); }
+    else { frasi.forEach(function (f) { segnaposto.parentNode.insertBefore(f, segnaposto); }); }
+  }
+  sistema(); window.addEventListener('resize', sistema);
+})();
+</script>
+
+<script>
+/* TELEFONO E IPAD 10/9/2026: (1) separatori che diventano a capo solo se il blocco va a capo (telefono);
+   (2) la freccia in fondo al primo schermo (telefono e iPad in verticale); (3) galleria a dito. */
+(function () {
+  var STRETTO = window.matchMedia('(max-width: 44rem)');
+  var STRETTO66 = window.matchMedia('(max-width: 66rem)');
+  var SKIP = /^(SCRIPT|STYLE|TITLE|SVG|NOSCRIPT|TEXTAREA|BUTTON)$/;
+  function prepara(root) {
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!n.nodeValue || n.nodeValue.indexOf('·') < 0) return NodeFilter.FILTER_REJECT;
+        for (var e = n.parentNode; e && e !== root; e = e.parentNode) {
+          if (SKIP.test(e.nodeName) || (e.classList && (e.classList.contains('sep') || e.classList.contains('ui-lang-select') || e.classList.contains('is-roots')))) return NodeFilter.FILTER_REJECT;
+          if (e.nodeName === 'B' && e.closest('.names-list')) return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodi = []; while (w.nextNode()) nodi.push(w.currentNode);
+    nodi.forEach(function (n) {
+      var testo = n.nodeValue, frag = document.createDocumentFragment(), m;
+      var g = /(\s| )*·(\s| )*/g, last = 0, trovato = false;
+      while ((m = g.exec(testo))) {
+        trovato = true;
+        frag.appendChild(document.createTextNode(testo.slice(last, m.index)));
+        var s = document.createElement('span'); s.className = 'sep'; s.textContent = ' · ';
+        frag.appendChild(s); last = m.index + m[0].length;
+      }
+      if (!trovato) return;
+      frag.appendChild(document.createTextNode(testo.slice(last)));
+      n.parentNode.replaceChild(frag, n);
+    });
+  }
+  function bloccoDi(sep) {
+    var e = sep.parentNode;
+    while (e && e !== document.body) {
+      var d = getComputedStyle(e).display;
+      if (d === 'none') return e;
+      if (d === 'block' || d === 'list-item' || d === 'flex' || d === 'grid' || d === 'table-cell' || d === 'inline-block') return e;
+      e = e.parentNode;
+    }
+    return sep.parentNode;
+  }
+  function vaACapo(el) {
+    var r = document.createRange(); r.selectNodeContents(el);
+    var rects = r.getClientRects(), tops = {}, n = 0;
+    for (var i = 0; i < rects.length; i++) { if (rects[i].width < 1 || rects[i].height < 2) continue; var t = Math.round(rects[i].top / 4); if (!tops[t]) { tops[t] = 1; n++; } }
+    return n > 1;
+  }
+  function misura() {
+    document.querySelectorAll('.spezza').forEach(function (b) { b.classList.remove('spezza'); });
+    if (!STRETTO66.matches) return;
+    var blocchi = [], visti = [];
+    document.querySelectorAll('.sep').forEach(function (s) { var b = bloccoDi(s); if (visti.indexOf(b) < 0) { visti.push(b); blocchi.push(b); } });
+    blocchi.forEach(function (b) {
+      if (b.offsetParent === null && getComputedStyle(b).display === 'none') return;
+      if (vaACapo(b)) b.classList.add('spezza');
+    });
+  }
+  /* G1: la freccia in fondo al primo schermo. Si misura con tutto al suo posto e si distribuisce
+     lo spazio che manca: a meta' intorno alla frase (centro) o sopra l'identita' (fondo). */
+  function primoSchermo() {
+    var c = document.querySelector('.line-connector'); if (!c) return;
+    var modo = STRETTO.matches ? (document.body.getAttribute('data-primo-schermo') || 'centro') : 'centro';
+    var frase = [].slice.call(document.querySelectorAll('.works-line.is-hero')).filter(function (f) { return getComputedStyle(f).display !== 'none'; })[0];
+    var ident = document.querySelector('.identity-line'); var hero = document.querySelector('.page-hero');
+    c.style.marginTop = ''; if (frase) frase.style.marginTop = ''; if (ident) ident.style.marginTop = ''; if (hero) hero.style.marginTop = '';
+    if (!STRETTO66.matches) return;
+    var fondo = c.getBoundingClientRect().bottom + window.scrollY;
+    var resto = window.innerHeight - 10 - fondo;
+    if (resto <= 0) return;
+    if (modo === 'centro' && frase) {
+      var base = parseFloat(getComputedStyle(frase).marginTop) || 0;
+      if (STRETTO.matches) { frase.style.marginTop = (base + resto / 2) + 'px'; c.style.marginTop = (resto / 2) + 'px'; }
+      else { /* Q: sull'iPad lo spazio si divide: sopra il video (meno se ci sono le linguette), sopra la frase, sopra la freccia */
+        var sopra = document.querySelector('.page-hero .lang-select') ? 0.15 : 0.3;
+        if (hero) hero.style.marginTop = (resto * sopra) + 'px'; frase.style.marginTop = (base + resto * (1 - sopra) / 2) + 'px'; c.style.marginTop = (resto * (1 - sopra) / 2) + 'px'; }
+    } else if (modo === 'fondo' && ident) {
+      ident.style.marginTop = resto + 'px';
+    } else { c.style.marginTop = resto + 'px'; }
+  }
+  /* O: nella galleria a tutto schermo si scorre col dito, le frecce restano */
+  (function () {
+    var x0 = null, y0 = null;
+    document.addEventListener('touchstart', function (e) { var lb = e.target.closest && e.target.closest('.lightbox'); if (!lb) return; x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
+    document.addEventListener('touchend', function (e) {
+      if (x0 === null) return; var lb = document.querySelector('.lightbox:not([hidden])'); var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
+      if (!lb || Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+      var b = lb.querySelector(dx < 0 ? '.lightbox-nav.is-next' : '.lightbox-nav.is-prev'); if (b) b.click();
+    }, {passive:true});
+  })();
+  function tutto() { prepara(document.body); misura(); primoSchermo(); }
+  /* Y: al cambio lingua la pagina non deve saltare: si ricorda cosa c'era in cima allo schermo e ci si rimette */
+  function tuttoAncorato() {
+    var el = document.elementFromPoint(Math.round(innerWidth / 2), 12), prima = el ? el.getBoundingClientRect().top : null;
+    tutto();
+    if (el && prima !== null) { var dopo = el.getBoundingClientRect().top; if (Math.abs(dopo - prima) > 1) window.scrollBy(0, dopo - prima); }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', tutto); else tutto();
+  window.addEventListener('load', function () { misura(); primoSchermo(); });
+  window.addEventListener('resize', function () { clearTimeout(window.__sepT); window.__sepT = setTimeout(function () { misura(); primoSchermo(); }, 120); });
+  document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('.ui-lang-btn')) setTimeout(tuttoAncorato, 80); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { misura(); primoSchermo(); });
+})();
+</script>
+
+<script>
+/* SCHERMO INTERO 10/9/2026: pulsante sul video di apertura, chiesto da Gladia dal telefono
+   («non c'e' la vignetta per mettere lo schermo grande»). Stesso disegno e stesso script di
+   Danza e Coreografia (.reel-full): sempre visibile senza mouse, al passaggio del mouse sul
+   computer. Su iPhone, che non ha requestFullscreen, si usa webkitEnterFullscreen del video. */
+(function () {
+  var b = document.getElementById('direzione-reel-full'); if (!b) return;
+  var box = b.closest('.reel'), video = box && box.querySelector('video');
+  b.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (document.fullscreenElement) { document.exitFullscreen(); return; }
+    if (box.requestFullscreen) { box.requestFullscreen().catch(function () {}); }
+    else if (video && video.webkitEnterFullscreen) { video.webkitEnterFullscreen(); }
+  });
+})();
+</script>
+<script>
+/* INDIRIZZI NELLA LINGUA 15/9/2026: l'indirizzo nella barra e i collegamenti seguono la lingua che si
+   vede. Cosi' copiare il link o premere Condividi manda l'indirizzo nella lingua della pagina, e chi
+   naviga resta nella lingua che ha scelto. Non ricarica niente. */
+(function () {
+  if (location.protocol === 'file:') return;
+  var G = window.GM_INDIRIZZI;
+  function coda() {
+    var q = new URLSearchParams(location.search); q.delete('lang');
+    var s = q.toString(); return s ? '?' + s : '';
+  }
+  function sincronizza() {
+    var l = document.documentElement.getAttribute('data-ui-lang');
+    if (!l || !G.mappa[G.pagina][l]) return;
+    /* la home inglese all'indirizzo nudo resta nuda: gladiamarchetti.com, non /en */
+    var atteso = (G.radice && l === 'en') ? '/' : '/' + G.mappa[G.pagina][l], s = coda();
+    if (location.pathname !== atteso || location.search !== s) {
+      try { history.replaceState(null, '', atteso + s + location.hash); } catch (e) {}
+    }
+    [['data-gm-pagina', 'href'], ['data-gm-pagina-dati', 'data-href']].forEach(function (c) {
+      document.querySelectorAll('[' + c[0] + ']').forEach(function (a) {
+        var k = a.getAttribute(c[0]), v = a.getAttribute(c[1]);
+        if (!G.mappa[k] || v === null) return;
+        var m = v.match(/^\/[^?#]*(.*)$/); if (!m) return;
+        var nuovo = '/' + G.mappa[k][l] + m[1];
+        if (v !== nuovo) a.setAttribute(c[1], nuovo);
+      });
+    });
+  }
+  document.querySelectorAll('.ui-lang-btn').forEach(function (b) {
+    b.addEventListener('click', function () { setTimeout(sincronizza, 0); });
+  });
+  document.addEventListener('gm-lang-change', function () { setTimeout(sincronizza, 0); });
+  window.addEventListener('load', sincronizza);
+  setTimeout(sincronizza, 400);
+  setTimeout(sincronizza, 1600);
+})();
+</script>
+</body>
+</html>

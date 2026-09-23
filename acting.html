@@ -1757,6 +1757,12 @@ window.GM_INDIRIZZI = { pagina: 'recitazione', lingua: 'en', radice: false, mapp
   [0, 50, 200, 600, 1500].forEach(function (t) { setTimeout(forza, t); });
 })();
 </script>
+<style>
+/* PRO 23/9/2026 */
+.pro-presentazione { margin: 0.2rem 0 0; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; text-align: center; }
+.pro-presentazione a { color: var(--accent); text-decoration: none; padding: 0.5rem 0.2rem; }
+.pro-presentazione a:hover, .pro-presentazione a:focus-visible { text-decoration: underline; text-underline-offset: 0.35em; }
+</style>
 <body data-primo-schermo="fondo">
 
 <a class="salta-al-contenuto" href="#contenuto" data-i18n="it">Salta al contenuto</a>
@@ -1855,6 +1861,14 @@ window.GM_INDIRIZZI = { pagina: 'recitazione', lingua: 'en', radice: false, mapp
     </div>
     <button class="lang-tab is-active" type="button" data-lang="tri" data-i18n-text-it="Trilingue" data-i18n-text-en="Trilingual" data-i18n-text-fr="Trilingue">Trilingue</button>
   </div>
+
+  <!-- PRO 23/9/2026: accesso al video di presentazione, solo sulla versione per le agenzie -->
+  <p class="pro-presentazione mono">
+    <a href="/presentation" data-i18n="fr">Vid&eacute;o de pr&eacute;sentation &rarr;</a>
+    <a href="/presentazione" data-i18n="it">Video di presentazione &rarr;</a>
+    <a href="/introduction" data-i18n="en">Introduction video &rarr;</a>
+  </p>
+
 </div>
 
 
